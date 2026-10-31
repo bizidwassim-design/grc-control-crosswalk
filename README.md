@@ -1,6 +1,6 @@
 # GRC Control Crosswalk
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![CI](https://github.com/bizidwassim-design/grc-control-crosswalk/actions/workflows/ci.yml/badge.svg)](https://github.com/bizidwassim-design/grc-control-crosswalk/actions/workflows/ci.yml) [![No macros](https://img.shields.io/badge/office%20files-no%20macros-success)](SECURITY.md) [![Fictional data](https://img.shields.io/badge/sample%20data-fictional-informational)](SECURITY.md)
 
 A free, open-source mapping between the controls of the frameworks most security teams juggle at once:
 
