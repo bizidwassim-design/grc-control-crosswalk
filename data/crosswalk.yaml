@@ -1,0 +1,848 @@
+crosswalk:
+  version: '1.0'
+  source_framework: ISO/IEC 27001:2022 Annex A
+  target_frameworks:
+  - NIST CSF 2.0
+  - CIS Controls v8
+  - ISO 42001
+  - SOC 2 TSC
+  license: MIT
+  disclaimer: Mappings are best-effort equivalences for planning and gap analysis, not an official or audited interpretation.
+controls:
+- iso27001_2022: A.5.1
+  title: Policies for information security
+  domain: Governance
+  maps_to:
+    nist_csf_2: GV.PO-01
+    cis_v8: CIS 14.1
+    iso42001: A.2.2
+    soc2_tsc: CC5.3
+  notes: Approved and communicated policies; ISO 42001 adds an AI policy
+- iso27001_2022: A.5.2
+  title: Information security roles and responsibilities
+  domain: Governance
+  maps_to:
+    nist_csf_2: GV.RR-02
+    cis_v8: CIS 17.1
+    iso42001: A.3.2
+    soc2_tsc: CC1.3
+  notes: Defined roles and accountability; AI roles under ISO 42001
+- iso27001_2022: A.5.3
+  title: Segregation of duties
+  domain: Governance
+  maps_to:
+    nist_csf_2: GV.RR-02
+    cis_v8: CIS 5.4
+    iso42001: A.3.2
+    soc2_tsc: CC5.2
+  notes: Separate conflicting duties for sensitive processes
+- iso27001_2022: A.5.4
+  title: Management responsibilities
+  domain: Governance
+  maps_to:
+    nist_csf_2: GV.RR-01
+    cis_v8: CIS 14.1
+    iso42001: A.3.2
+    soc2_tsc: CC1.1
+  notes: Management requires compliance with policies
+- iso27001_2022: A.5.5
+  title: Contact with authorities
+  domain: Governance
+  maps_to:
+    nist_csf_2: RS.CO-02
+    cis_v8: CIS 17.2
+    iso42001: A.8.4
+    soc2_tsc: CC2.3
+  notes: Maintain regulator and law-enforcement contacts
+- iso27001_2022: A.5.6
+  title: Contact with special interest groups
+  domain: Governance
+  maps_to:
+    nist_csf_2: ID.RA-02
+    cis_v8: CIS 17.2
+    iso42001: A.8.4
+    soc2_tsc: CC2.3
+  notes: Threat intel sharing and professional groups
+- iso27001_2022: A.5.7
+  title: Threat intelligence
+  domain: Governance
+  maps_to:
+    nist_csf_2: ID.RA-02
+    cis_v8: CIS 17.2
+    iso42001: A.6.2.3
+    soc2_tsc: CC3.2
+  notes: Collect and analyse threat information
+- iso27001_2022: A.5.8
+  title: Information security in project management
+  domain: Governance
+  maps_to:
+    nist_csf_2: GV.RM-01
+    cis_v8: CIS 16.1
+    iso42001: A.6.1.2
+    soc2_tsc: CC3.1
+  notes: Embed security in projects and change
+- iso27001_2022: A.5.9
+  title: Inventory of information and other associated assets
+  domain: Asset management
+  maps_to:
+    nist_csf_2: ID.AM-01
+    cis_v8: CIS 1.1
+    iso42001: A.4.3
+    soc2_tsc: CC6.1
+  notes: Asset inventory with owners; ISO 42001 covers AI resources
+- iso27001_2022: A.5.10
+  title: Acceptable use of information and other associated assets
+  domain: Asset management
+  maps_to:
+    nist_csf_2: GV.PO-01
+    cis_v8: CIS 14.1
+    iso42001: A.9.3
+    soc2_tsc: CC5.3
+  notes: Acceptable-use rules
+- iso27001_2022: A.5.11
+  title: Return of assets
+  domain: Asset management
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 5.3
+    iso42001: A.3.2
+    soc2_tsc: CC6.5
+  notes: Return assets at termination
+- iso27001_2022: A.5.12
+  title: Classification of information
+  domain: Data protection
+  maps_to:
+    nist_csf_2: ID.AM-05
+    cis_v8: CIS 3.7
+    iso42001: A.7.4
+    soc2_tsc: CC6.1
+  notes: Classify by value and sensitivity
+- iso27001_2022: A.5.13
+  title: Labelling of information
+  domain: Data protection
+  maps_to:
+    nist_csf_2: ID.AM-05
+    cis_v8: CIS 3.7
+    iso42001: A.7.4
+    soc2_tsc: CC6.1
+  notes: Label according to classification
+- iso27001_2022: A.5.14
+  title: Information transfer
+  domain: Data protection
+  maps_to:
+    nist_csf_2: PR.DS-02
+    cis_v8: CIS 3.10
+    iso42001: A.7.2
+    soc2_tsc: CC6.7
+  notes: Secure transfer rules and agreements
+- iso27001_2022: A.5.15
+  title: Access control
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 6.1
+    iso42001: A.4.5
+    soc2_tsc: CC6.1
+  notes: Access control policy; least privilege
+- iso27001_2022: A.5.16
+  title: Identity management
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-01
+    cis_v8: CIS 5.1
+    iso42001: A.4.5
+    soc2_tsc: CC6.1
+  notes: Lifecycle of identities
+- iso27001_2022: A.5.17
+  title: Authentication information
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-03
+    cis_v8: CIS 5.2
+    iso42001: A.4.5
+    soc2_tsc: CC6.1
+  notes: Secrets and credential handling
+- iso27001_2022: A.5.18
+  title: Access rights
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 6.8
+    iso42001: A.4.5
+    soc2_tsc: CC6.2
+  notes: Provision review and revoke access
+- iso27001_2022: A.5.19
+  title: Information security in supplier relationships
+  domain: Supplier
+  maps_to:
+    nist_csf_2: GV.SC-04
+    cis_v8: CIS 15.1
+    iso42001: A.10.2
+    soc2_tsc: CC9.2
+  notes: Supplier risk management
+- iso27001_2022: A.5.20
+  title: Addressing information security within supplier agreements
+  domain: Supplier
+  maps_to:
+    nist_csf_2: GV.SC-05
+    cis_v8: CIS 15.4
+    iso42001: A.10.3
+    soc2_tsc: CC9.2
+  notes: Security clauses in contracts
+- iso27001_2022: A.5.21
+  title: Managing information security in the ICT supply chain
+  domain: Supplier
+  maps_to:
+    nist_csf_2: GV.SC-06
+    cis_v8: CIS 15.5
+    iso42001: A.10.3
+    soc2_tsc: CC9.2
+  notes: Supply chain risk including software
+- iso27001_2022: A.5.22
+  title: Monitoring, review and change management of supplier services
+  domain: Supplier
+  maps_to:
+    nist_csf_2: GV.SC-07
+    cis_v8: CIS 15.6
+    iso42001: A.10.3
+    soc2_tsc: CC9.2
+  notes: Ongoing supplier monitoring
+- iso27001_2022: A.5.23
+  title: Information security for use of cloud services
+  domain: Supplier
+  maps_to:
+    nist_csf_2: GV.SC-04
+    cis_v8: CIS 15.1
+    iso42001: A.10.3
+    soc2_tsc: CC9.2
+  notes: Cloud acquisition use and exit
+- iso27001_2022: A.5.24
+  title: Information security incident management planning and preparation
+  domain: Resilience
+  maps_to:
+    nist_csf_2: RS.MA-01
+    cis_v8: CIS 17.1
+    iso42001: A.6.2.6
+    soc2_tsc: CC7.3
+  notes: Incident management process
+- iso27001_2022: A.5.25
+  title: Assessment and decision on information security events
+  domain: Resilience
+  maps_to:
+    nist_csf_2: DE.AE-08
+    cis_v8: CIS 17.4
+    iso42001: A.6.2.6
+    soc2_tsc: CC7.3
+  notes: Triage and classification of events
+- iso27001_2022: A.5.26
+  title: Response to information security incidents
+  domain: Resilience
+  maps_to:
+    nist_csf_2: RS.MA-02
+    cis_v8: CIS 17.4
+    iso42001: A.6.2.6
+    soc2_tsc: CC7.4
+  notes: Respond per procedures
+- iso27001_2022: A.5.27
+  title: Learning from information security incidents
+  domain: Resilience
+  maps_to:
+    nist_csf_2: ID.IM-04
+    cis_v8: CIS 17.8
+    iso42001: A.6.2.6
+    soc2_tsc: CC7.5
+  notes: Lessons learned
+- iso27001_2022: A.5.28
+  title: Collection of evidence
+  domain: Resilience
+  maps_to:
+    nist_csf_2: RS.AN-07
+    cis_v8: CIS 17.9
+    iso42001: A.6.2.6
+    soc2_tsc: CC7.4
+  notes: Preserve forensic evidence
+- iso27001_2022: A.5.29
+  title: Information security during disruption
+  domain: Resilience
+  maps_to:
+    nist_csf_2: PR.IR-04
+    cis_v8: CIS 11.1
+    iso42001: A.6.2.6
+    soc2_tsc: A1.2
+  notes: Maintain security during disruption
+- iso27001_2022: A.5.30
+  title: ICT readiness for business continuity
+  domain: Resilience
+  maps_to:
+    nist_csf_2: RC.RP-01
+    cis_v8: CIS 11.1
+    iso42001: A.6.2.6
+    soc2_tsc: A1.3
+  notes: Continuity planning and testing
+- iso27001_2022: A.5.31
+  title: Legal, statutory, regulatory and contractual requirements
+  domain: Compliance
+  maps_to:
+    nist_csf_2: GV.OC-03
+    cis_v8: CIS 17.1
+    iso42001: A.2.3
+    soc2_tsc: CC1.1
+  notes: Identify legal obligations; AI regulations under ISO 42001
+- iso27001_2022: A.5.32
+  title: Intellectual property rights
+  domain: Compliance
+  maps_to:
+    nist_csf_2: GV.OC-03
+    cis_v8: CIS 2.2
+    iso42001: A.7.3
+    soc2_tsc: CC1.1
+  notes: Protect IP including training data rights
+- iso27001_2022: A.5.33
+  title: Protection of records
+  domain: Compliance
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.4
+    iso42001: A.7.5
+    soc2_tsc: CC6.1
+  notes: Records protection and retention
+- iso27001_2022: A.5.34
+  title: Privacy and protection of PII
+  domain: Compliance
+  maps_to:
+    nist_csf_2: GV.OC-03
+    cis_v8: CIS 3.1
+    iso42001: A.5.2
+    soc2_tsc: P1.1
+  notes: Privacy obligations; ISO 42001 impact assessment
+- iso27001_2022: A.5.35
+  title: Independent review of information security
+  domain: Compliance
+  maps_to:
+    nist_csf_2: GV.OV-03
+    cis_v8: CIS 17.1
+    iso42001: A.9.3
+    soc2_tsc: CC4.1
+  notes: Independent reviews and audits
+- iso27001_2022: A.5.36
+  title: Compliance with policies, rules and standards for information security
+  domain: Compliance
+  maps_to:
+    nist_csf_2: GV.OV-01
+    cis_v8: CIS 14.1
+    iso42001: A.9.3
+    soc2_tsc: CC4.1
+  notes: Regular compliance reviews
+- iso27001_2022: A.5.37
+  title: Documented operating procedures
+  domain: Operations
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 4.1
+    iso42001: A.6.2.5
+    soc2_tsc: CC5.3
+  notes: Documented procedures
+- iso27001_2022: A.6.1
+  title: Screening
+  domain: People
+  maps_to:
+    nist_csf_2: PR.AA-01
+    cis_v8: CIS 6.1
+    iso42001: A.4.6
+    soc2_tsc: CC1.4
+  notes: Background verification
+- iso27001_2022: A.6.2
+  title: Terms and conditions of employment
+  domain: People
+  maps_to:
+    nist_csf_2: GV.RR-04
+    cis_v8: CIS 14.1
+    iso42001: A.4.6
+    soc2_tsc: CC1.4
+  notes: Security responsibilities in contracts
+- iso27001_2022: A.6.3
+  title: Information security awareness, education and training
+  domain: People
+  maps_to:
+    nist_csf_2: PR.AT-01
+    cis_v8: CIS 14.1
+    iso42001: A.4.6
+    soc2_tsc: CC1.4
+  notes: Awareness and training; AI literacy under ISO 42001
+- iso27001_2022: A.6.4
+  title: Disciplinary process
+  domain: People
+  maps_to:
+    nist_csf_2: GV.RR-04
+    cis_v8: CIS 14.1
+    iso42001: A.4.6
+    soc2_tsc: CC1.5
+  notes: Formal disciplinary process
+- iso27001_2022: A.6.5
+  title: Responsibilities after termination or change of employment
+  domain: People
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 5.3
+    iso42001: A.4.6
+    soc2_tsc: CC6.5
+  notes: Post-employment responsibilities
+- iso27001_2022: A.6.6
+  title: Confidentiality or non-disclosure agreements
+  domain: People
+  maps_to:
+    nist_csf_2: GV.SC-05
+    cis_v8: CIS 15.4
+    iso42001: A.4.6
+    soc2_tsc: CC9.2
+  notes: NDAs
+- iso27001_2022: A.6.7
+  title: Remote working
+  domain: People
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 12.7
+    iso42001: A.4.6
+    soc2_tsc: CC6.7
+  notes: Remote working controls
+- iso27001_2022: A.6.8
+  title: Information security event reporting
+  domain: People
+  maps_to:
+    nist_csf_2: DE.AE-08
+    cis_v8: CIS 17.2
+    iso42001: A.6.2.6
+    soc2_tsc: CC2.2
+  notes: Report events promptly
+- iso27001_2022: A.7.1
+  title: Physical security perimeters
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.AA-06
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Physical perimeters
+- iso27001_2022: A.7.2
+  title: Physical entry
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.AA-06
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Entry controls
+- iso27001_2022: A.7.3
+  title: Securing offices, rooms and facilities
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.AA-06
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Secure facilities
+- iso27001_2022: A.7.4
+  title: Physical security monitoring
+  domain: Physical
+  maps_to:
+    nist_csf_2: DE.CM-02
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Monitor physical access
+- iso27001_2022: A.7.5
+  title: Protecting against physical and environmental threats
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.IR-02
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: A1.2
+  notes: Environmental protection
+- iso27001_2022: A.7.6
+  title: Working in secure areas
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.AA-06
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Secure area rules
+- iso27001_2022: A.7.7
+  title: Clear desk and clear screen
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Clear desk and screen
+- iso27001_2022: A.7.8
+  title: Equipment siting and protection
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.IR-02
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: A1.2
+  notes: Equipment protection
+- iso27001_2022: A.7.9
+  title: Security of assets off-premises
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 1.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.7
+  notes: Off-site assets
+- iso27001_2022: A.7.10
+  title: Storage media
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.5
+    iso42001: A.7.5
+    soc2_tsc: CC6.5
+  notes: Media lifecycle
+- iso27001_2022: A.7.11
+  title: Supporting utilities
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.IR-02
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: A1.2
+  notes: Utilities resilience
+- iso27001_2022: A.7.12
+  title: Cabling security
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.IR-02
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.4
+  notes: Cabling protection
+- iso27001_2022: A.7.13
+  title: Equipment maintenance
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 12.1
+    iso42001: A.4.2
+    soc2_tsc: A1.2
+  notes: Maintenance
+- iso27001_2022: A.7.14
+  title: Secure disposal or re-use of equipment
+  domain: Physical
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.5
+    iso42001: A.7.5
+    soc2_tsc: CC6.5
+  notes: Sanitise before disposal
+- iso27001_2022: A.8.1
+  title: User endpoint devices
+  domain: Endpoint
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 4.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.8
+  notes: Endpoint protection
+- iso27001_2022: A.8.2
+  title: Privileged access rights
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 5.4
+    iso42001: A.4.5
+    soc2_tsc: CC6.3
+  notes: Restrict and monitor privileged access
+- iso27001_2022: A.8.3
+  title: Information access restriction
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 3.3
+    iso42001: A.4.5
+    soc2_tsc: CC6.1
+  notes: Restrict access per policy
+- iso27001_2022: A.8.4
+  title: Access to source code
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 16.1
+    iso42001: A.6.2.3
+    soc2_tsc: CC8.1
+  notes: Protect source code and models
+- iso27001_2022: A.8.5
+  title: Secure authentication
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-03
+    cis_v8: CIS 6.3
+    iso42001: A.4.5
+    soc2_tsc: CC6.1
+  notes: MFA and secure authentication
+- iso27001_2022: A.8.6
+  title: Capacity management
+  domain: Operations
+  maps_to:
+    nist_csf_2: PR.IR-04
+    cis_v8: CIS 12.1
+    iso42001: A.4.3
+    soc2_tsc: A1.1
+  notes: Capacity planning
+- iso27001_2022: A.8.7
+  title: Protection against malware
+  domain: Endpoint
+  maps_to:
+    nist_csf_2: DE.CM-09
+    cis_v8: CIS 10.1
+    iso42001: A.4.2
+    soc2_tsc: CC6.8
+  notes: Anti-malware
+- iso27001_2022: A.8.8
+  title: Management of technical vulnerabilities
+  domain: Vulnerability
+  maps_to:
+    nist_csf_2: ID.RA-01
+    cis_v8: CIS 7.1
+    iso42001: A.6.2.6
+    soc2_tsc: CC7.1
+  notes: Vulnerability management
+- iso27001_2022: A.8.9
+  title: Configuration management
+  domain: Operations
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 4.1
+    iso42001: A.6.2.5
+    soc2_tsc: CC8.1
+  notes: Secure configuration baselines
+- iso27001_2022: A.8.10
+  title: Information deletion
+  domain: Data protection
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.4
+    iso42001: A.7.5
+    soc2_tsc: CC6.5
+  notes: Delete when no longer required
+- iso27001_2022: A.8.11
+  title: Data masking
+  domain: Data protection
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.12
+    iso42001: A.7.6
+    soc2_tsc: CC6.1
+  notes: Masking and pseudonymisation
+- iso27001_2022: A.8.12
+  title: Data leakage prevention
+  domain: Data protection
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.13
+    iso42001: A.7.6
+    soc2_tsc: CC6.7
+  notes: DLP controls
+- iso27001_2022: A.8.13
+  title: Information backup
+  domain: Resilience
+  maps_to:
+    nist_csf_2: PR.DS-11
+    cis_v8: CIS 11.2
+    iso42001: A.6.2.6
+    soc2_tsc: A1.2
+  notes: Backups and restore testing
+- iso27001_2022: A.8.14
+  title: Redundancy of information processing facilities
+  domain: Resilience
+  maps_to:
+    nist_csf_2: PR.IR-03
+    cis_v8: CIS 11.1
+    iso42001: A.4.3
+    soc2_tsc: A1.2
+  notes: Redundancy
+- iso27001_2022: A.8.15
+  title: Logging
+  domain: Detection
+  maps_to:
+    nist_csf_2: DE.CM-01
+    cis_v8: CIS 8.2
+    iso42001: A.6.2.8
+    soc2_tsc: CC7.2
+  notes: Logging of events
+- iso27001_2022: A.8.16
+  title: Monitoring activities
+  domain: Detection
+  maps_to:
+    nist_csf_2: DE.CM-01
+    cis_v8: CIS 8.11
+    iso42001: A.6.2.8
+    soc2_tsc: CC7.2
+  notes: Monitor for anomalies; AI system monitoring
+- iso27001_2022: A.8.17
+  title: Clock synchronisation
+  domain: Operations
+  maps_to:
+    nist_csf_2: DE.CM-01
+    cis_v8: CIS 8.4
+    iso42001: A.6.2.8
+    soc2_tsc: CC7.2
+  notes: Time synchronisation
+- iso27001_2022: A.8.18
+  title: Use of privileged utility programs
+  domain: Access control
+  maps_to:
+    nist_csf_2: PR.AA-05
+    cis_v8: CIS 5.4
+    iso42001: A.4.5
+    soc2_tsc: CC6.3
+  notes: Restrict utilities
+- iso27001_2022: A.8.19
+  title: Installation of software on operational systems
+  domain: Operations
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 2.5
+    iso42001: A.6.2.5
+    soc2_tsc: CC8.1
+  notes: Control software installation
+- iso27001_2022: A.8.20
+  title: Networks security
+  domain: Network
+  maps_to:
+    nist_csf_2: PR.IR-01
+    cis_v8: CIS 12.2
+    iso42001: A.4.2
+    soc2_tsc: CC6.6
+  notes: Network security controls
+- iso27001_2022: A.8.21
+  title: Security of network services
+  domain: Network
+  maps_to:
+    nist_csf_2: PR.IR-01
+    cis_v8: CIS 12.2
+    iso42001: A.4.2
+    soc2_tsc: CC6.6
+  notes: Secure network services
+- iso27001_2022: A.8.22
+  title: Segregation of networks
+  domain: Network
+  maps_to:
+    nist_csf_2: PR.IR-01
+    cis_v8: CIS 12.2
+    iso42001: A.4.2
+    soc2_tsc: CC6.6
+  notes: Network segmentation
+- iso27001_2022: A.8.23
+  title: Web filtering
+  domain: Network
+  maps_to:
+    nist_csf_2: PR.PS-05
+    cis_v8: CIS 9.3
+    iso42001: A.4.2
+    soc2_tsc: CC6.8
+  notes: Web filtering
+- iso27001_2022: A.8.24
+  title: Use of cryptography
+  domain: Cryptography
+  maps_to:
+    nist_csf_2: PR.DS-02
+    cis_v8: CIS 3.11
+    iso42001: A.7.6
+    soc2_tsc: CC6.7
+  notes: Cryptography and key management
+- iso27001_2022: A.8.25
+  title: Secure development life cycle
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-06
+    cis_v8: CIS 16.1
+    iso42001: A.6.2.3
+    soc2_tsc: CC8.1
+  notes: Secure SDLC; AI development lifecycle
+- iso27001_2022: A.8.26
+  title: Application security requirements
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-06
+    cis_v8: CIS 16.1
+    iso42001: A.6.1.3
+    soc2_tsc: CC8.1
+  notes: Security requirements for applications
+- iso27001_2022: A.8.27
+  title: Secure system architecture and engineering principles
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-06
+    cis_v8: CIS 16.1
+    iso42001: A.6.1.3
+    soc2_tsc: CC8.1
+  notes: Secure engineering principles
+- iso27001_2022: A.8.28
+  title: Secure coding
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-06
+    cis_v8: CIS 16.11
+    iso42001: A.6.2.3
+    soc2_tsc: CC8.1
+  notes: Secure coding standards
+- iso27001_2022: A.8.29
+  title: Security testing in development and acceptance
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-06
+    cis_v8: CIS 16.12
+    iso42001: A.6.2.4
+    soc2_tsc: CC8.1
+  notes: Security testing; AI verification and validation
+- iso27001_2022: A.8.30
+  title: Outsourced development
+  domain: Development
+  maps_to:
+    nist_csf_2: GV.SC-06
+    cis_v8: CIS 16.1
+    iso42001: A.10.3
+    soc2_tsc: CC9.2
+  notes: Supervise outsourced development
+- iso27001_2022: A.8.31
+  title: Separation of development, test and production environments
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 16.8
+    iso42001: A.6.2.5
+    soc2_tsc: CC8.1
+  notes: Environment separation
+- iso27001_2022: A.8.32
+  title: Change management
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 16.1
+    iso42001: A.6.2.5
+    soc2_tsc: CC8.1
+  notes: Change control
+- iso27001_2022: A.8.33
+  title: Test information
+  domain: Development
+  maps_to:
+    nist_csf_2: PR.DS-01
+    cis_v8: CIS 3.1
+    iso42001: A.7.6
+    soc2_tsc: CC8.1
+  notes: Protect test data
+- iso27001_2022: A.8.34
+  title: Protection of information systems during audit testing
+  domain: Operations
+  maps_to:
+    nist_csf_2: PR.PS-01
+    cis_v8: CIS 17.1
+    iso42001: A.9.3
+    soc2_tsc: CC4.1
+  notes: Protect systems during audit

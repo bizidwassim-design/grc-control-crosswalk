@@ -1,0 +1,94 @@
+domain,iso27001_2022,iso27001_title,nist_csf_2,cis_v8,iso42001,soc2_tsc,notes
+Governance,A.5.1,Policies for information security,GV.PO-01,CIS 14.1,A.2.2,CC5.3,Approved and communicated policies; ISO 42001 adds an AI policy
+Governance,A.5.2,Information security roles and responsibilities,GV.RR-02,CIS 17.1,A.3.2,CC1.3,Defined roles and accountability; AI roles under ISO 42001
+Governance,A.5.3,Segregation of duties,GV.RR-02,CIS 5.4,A.3.2,CC5.2,Separate conflicting duties for sensitive processes
+Governance,A.5.4,Management responsibilities,GV.RR-01,CIS 14.1,A.3.2,CC1.1,Management requires compliance with policies
+Governance,A.5.5,Contact with authorities,RS.CO-02,CIS 17.2,A.8.4,CC2.3,Maintain regulator and law-enforcement contacts
+Governance,A.5.6,Contact with special interest groups,ID.RA-02,CIS 17.2,A.8.4,CC2.3,Threat intel sharing and professional groups
+Governance,A.5.7,Threat intelligence,ID.RA-02,CIS 17.2,A.6.2.3,CC3.2,Collect and analyse threat information
+Governance,A.5.8,Information security in project management,GV.RM-01,CIS 16.1,A.6.1.2,CC3.1,Embed security in projects and change
+Asset management,A.5.9,Inventory of information and other associated assets,ID.AM-01,CIS 1.1,A.4.3,CC6.1,Asset inventory with owners; ISO 42001 covers AI resources
+Asset management,A.5.10,Acceptable use of information and other associated assets,GV.PO-01,CIS 14.1,A.9.3,CC5.3,Acceptable-use rules
+Asset management,A.5.11,Return of assets,PR.AA-05,CIS 5.3,A.3.2,CC6.5,Return assets at termination
+Data protection,A.5.12,Classification of information,ID.AM-05,CIS 3.7,A.7.4,CC6.1,Classify by value and sensitivity
+Data protection,A.5.13,Labelling of information,ID.AM-05,CIS 3.7,A.7.4,CC6.1,Label according to classification
+Data protection,A.5.14,Information transfer,PR.DS-02,CIS 3.10,A.7.2,CC6.7,Secure transfer rules and agreements
+Access control,A.5.15,Access control,PR.AA-05,CIS 6.1,A.4.5,CC6.1,Access control policy; least privilege
+Access control,A.5.16,Identity management,PR.AA-01,CIS 5.1,A.4.5,CC6.1,Lifecycle of identities
+Access control,A.5.17,Authentication information,PR.AA-03,CIS 5.2,A.4.5,CC6.1,Secrets and credential handling
+Access control,A.5.18,Access rights,PR.AA-05,CIS 6.8,A.4.5,CC6.2,Provision review and revoke access
+Supplier,A.5.19,Information security in supplier relationships,GV.SC-04,CIS 15.1,A.10.2,CC9.2,Supplier risk management
+Supplier,A.5.20,Addressing information security within supplier agreements,GV.SC-05,CIS 15.4,A.10.3,CC9.2,Security clauses in contracts
+Supplier,A.5.21,Managing information security in the ICT supply chain,GV.SC-06,CIS 15.5,A.10.3,CC9.2,Supply chain risk including software
+Supplier,A.5.22,"Monitoring, review and change management of supplier services",GV.SC-07,CIS 15.6,A.10.3,CC9.2,Ongoing supplier monitoring
+Supplier,A.5.23,Information security for use of cloud services,GV.SC-04,CIS 15.1,A.10.3,CC9.2,Cloud acquisition use and exit
+Resilience,A.5.24,Information security incident management planning and preparation,RS.MA-01,CIS 17.1,A.6.2.6,CC7.3,Incident management process
+Resilience,A.5.25,Assessment and decision on information security events,DE.AE-08,CIS 17.4,A.6.2.6,CC7.3,Triage and classification of events
+Resilience,A.5.26,Response to information security incidents,RS.MA-02,CIS 17.4,A.6.2.6,CC7.4,Respond per procedures
+Resilience,A.5.27,Learning from information security incidents,ID.IM-04,CIS 17.8,A.6.2.6,CC7.5,Lessons learned
+Resilience,A.5.28,Collection of evidence,RS.AN-07,CIS 17.9,A.6.2.6,CC7.4,Preserve forensic evidence
+Resilience,A.5.29,Information security during disruption,PR.IR-04,CIS 11.1,A.6.2.6,A1.2,Maintain security during disruption
+Resilience,A.5.30,ICT readiness for business continuity,RC.RP-01,CIS 11.1,A.6.2.6,A1.3,Continuity planning and testing
+Compliance,A.5.31,"Legal, statutory, regulatory and contractual requirements",GV.OC-03,CIS 17.1,A.2.3,CC1.1,Identify legal obligations; AI regulations under ISO 42001
+Compliance,A.5.32,Intellectual property rights,GV.OC-03,CIS 2.2,A.7.3,CC1.1,Protect IP including training data rights
+Compliance,A.5.33,Protection of records,PR.DS-01,CIS 3.4,A.7.5,CC6.1,Records protection and retention
+Compliance,A.5.34,Privacy and protection of PII,GV.OC-03,CIS 3.1,A.5.2,P1.1,Privacy obligations; ISO 42001 impact assessment
+Compliance,A.5.35,Independent review of information security,GV.OV-03,CIS 17.1,A.9.3,CC4.1,Independent reviews and audits
+Compliance,A.5.36,"Compliance with policies, rules and standards for information security",GV.OV-01,CIS 14.1,A.9.3,CC4.1,Regular compliance reviews
+Operations,A.5.37,Documented operating procedures,PR.PS-01,CIS 4.1,A.6.2.5,CC5.3,Documented procedures
+People,A.6.1,Screening,PR.AA-01,CIS 6.1,A.4.6,CC1.4,Background verification
+People,A.6.2,Terms and conditions of employment,GV.RR-04,CIS 14.1,A.4.6,CC1.4,Security responsibilities in contracts
+People,A.6.3,"Information security awareness, education and training",PR.AT-01,CIS 14.1,A.4.6,CC1.4,Awareness and training; AI literacy under ISO 42001
+People,A.6.4,Disciplinary process,GV.RR-04,CIS 14.1,A.4.6,CC1.5,Formal disciplinary process
+People,A.6.5,Responsibilities after termination or change of employment,PR.AA-05,CIS 5.3,A.4.6,CC6.5,Post-employment responsibilities
+People,A.6.6,Confidentiality or non-disclosure agreements,GV.SC-05,CIS 15.4,A.4.6,CC9.2,NDAs
+People,A.6.7,Remote working,PR.PS-01,CIS 12.7,A.4.6,CC6.7,Remote working controls
+People,A.6.8,Information security event reporting,DE.AE-08,CIS 17.2,A.6.2.6,CC2.2,Report events promptly
+Physical,A.7.1,Physical security perimeters,PR.AA-06,CIS 12.1,A.4.2,CC6.4,Physical perimeters
+Physical,A.7.2,Physical entry,PR.AA-06,CIS 12.1,A.4.2,CC6.4,Entry controls
+Physical,A.7.3,"Securing offices, rooms and facilities",PR.AA-06,CIS 12.1,A.4.2,CC6.4,Secure facilities
+Physical,A.7.4,Physical security monitoring,DE.CM-02,CIS 12.1,A.4.2,CC6.4,Monitor physical access
+Physical,A.7.5,Protecting against physical and environmental threats,PR.IR-02,CIS 12.1,A.4.2,A1.2,Environmental protection
+Physical,A.7.6,Working in secure areas,PR.AA-06,CIS 12.1,A.4.2,CC6.4,Secure area rules
+Physical,A.7.7,Clear desk and clear screen,PR.DS-01,CIS 3.1,A.4.2,CC6.4,Clear desk and screen
+Physical,A.7.8,Equipment siting and protection,PR.IR-02,CIS 12.1,A.4.2,A1.2,Equipment protection
+Physical,A.7.9,Security of assets off-premises,PR.DS-01,CIS 1.1,A.4.2,CC6.7,Off-site assets
+Physical,A.7.10,Storage media,PR.DS-01,CIS 3.5,A.7.5,CC6.5,Media lifecycle
+Physical,A.7.11,Supporting utilities,PR.IR-02,CIS 12.1,A.4.2,A1.2,Utilities resilience
+Physical,A.7.12,Cabling security,PR.IR-02,CIS 12.1,A.4.2,CC6.4,Cabling protection
+Physical,A.7.13,Equipment maintenance,PR.PS-01,CIS 12.1,A.4.2,A1.2,Maintenance
+Physical,A.7.14,Secure disposal or re-use of equipment,PR.DS-01,CIS 3.5,A.7.5,CC6.5,Sanitise before disposal
+Endpoint,A.8.1,User endpoint devices,PR.PS-01,CIS 4.1,A.4.2,CC6.8,Endpoint protection
+Access control,A.8.2,Privileged access rights,PR.AA-05,CIS 5.4,A.4.5,CC6.3,Restrict and monitor privileged access
+Access control,A.8.3,Information access restriction,PR.AA-05,CIS 3.3,A.4.5,CC6.1,Restrict access per policy
+Access control,A.8.4,Access to source code,PR.AA-05,CIS 16.1,A.6.2.3,CC8.1,Protect source code and models
+Access control,A.8.5,Secure authentication,PR.AA-03,CIS 6.3,A.4.5,CC6.1,MFA and secure authentication
+Operations,A.8.6,Capacity management,PR.IR-04,CIS 12.1,A.4.3,A1.1,Capacity planning
+Endpoint,A.8.7,Protection against malware,DE.CM-09,CIS 10.1,A.4.2,CC6.8,Anti-malware
+Vulnerability,A.8.8,Management of technical vulnerabilities,ID.RA-01,CIS 7.1,A.6.2.6,CC7.1,Vulnerability management
+Operations,A.8.9,Configuration management,PR.PS-01,CIS 4.1,A.6.2.5,CC8.1,Secure configuration baselines
+Data protection,A.8.10,Information deletion,PR.DS-01,CIS 3.4,A.7.5,CC6.5,Delete when no longer required
+Data protection,A.8.11,Data masking,PR.DS-01,CIS 3.12,A.7.6,CC6.1,Masking and pseudonymisation
+Data protection,A.8.12,Data leakage prevention,PR.DS-01,CIS 3.13,A.7.6,CC6.7,DLP controls
+Resilience,A.8.13,Information backup,PR.DS-11,CIS 11.2,A.6.2.6,A1.2,Backups and restore testing
+Resilience,A.8.14,Redundancy of information processing facilities,PR.IR-03,CIS 11.1,A.4.3,A1.2,Redundancy
+Detection,A.8.15,Logging,DE.CM-01,CIS 8.2,A.6.2.8,CC7.2,Logging of events
+Detection,A.8.16,Monitoring activities,DE.CM-01,CIS 8.11,A.6.2.8,CC7.2,Monitor for anomalies; AI system monitoring
+Operations,A.8.17,Clock synchronisation,DE.CM-01,CIS 8.4,A.6.2.8,CC7.2,Time synchronisation
+Access control,A.8.18,Use of privileged utility programs,PR.AA-05,CIS 5.4,A.4.5,CC6.3,Restrict utilities
+Operations,A.8.19,Installation of software on operational systems,PR.PS-01,CIS 2.5,A.6.2.5,CC8.1,Control software installation
+Network,A.8.20,Networks security,PR.IR-01,CIS 12.2,A.4.2,CC6.6,Network security controls
+Network,A.8.21,Security of network services,PR.IR-01,CIS 12.2,A.4.2,CC6.6,Secure network services
+Network,A.8.22,Segregation of networks,PR.IR-01,CIS 12.2,A.4.2,CC6.6,Network segmentation
+Network,A.8.23,Web filtering,PR.PS-05,CIS 9.3,A.4.2,CC6.8,Web filtering
+Cryptography,A.8.24,Use of cryptography,PR.DS-02,CIS 3.11,A.7.6,CC6.7,Cryptography and key management
+Development,A.8.25,Secure development life cycle,PR.PS-06,CIS 16.1,A.6.2.3,CC8.1,Secure SDLC; AI development lifecycle
+Development,A.8.26,Application security requirements,PR.PS-06,CIS 16.1,A.6.1.3,CC8.1,Security requirements for applications
+Development,A.8.27,Secure system architecture and engineering principles,PR.PS-06,CIS 16.1,A.6.1.3,CC8.1,Secure engineering principles
+Development,A.8.28,Secure coding,PR.PS-06,CIS 16.11,A.6.2.3,CC8.1,Secure coding standards
+Development,A.8.29,Security testing in development and acceptance,PR.PS-06,CIS 16.12,A.6.2.4,CC8.1,Security testing; AI verification and validation
+Development,A.8.30,Outsourced development,GV.SC-06,CIS 16.1,A.10.3,CC9.2,Supervise outsourced development
+Development,A.8.31,"Separation of development, test and production environments",PR.PS-01,CIS 16.8,A.6.2.5,CC8.1,Environment separation
+Development,A.8.32,Change management,PR.PS-01,CIS 16.1,A.6.2.5,CC8.1,Change control
+Development,A.8.33,Test information,PR.DS-01,CIS 3.1,A.7.6,CC8.1,Protect test data
+Operations,A.8.34,Protection of information systems during audit testing,PR.PS-01,CIS 17.1,A.9.3,CC4.1,Protect systems during audit

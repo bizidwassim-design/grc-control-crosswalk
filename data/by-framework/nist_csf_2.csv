@@ -1,0 +1,42 @@
+NIST CSF 2.0,iso27001_2022 controls,control titles,CIS Controls v8,ISO 42001,SOC 2 TSC
+DE.AE-08,A.5.25; A.6.8,Assessment and decision on information security events; Information security event reporting,CIS 17.2; CIS 17.4,A.6.2.6,CC2.2; CC7.3
+DE.CM-01,A.8.15; A.8.16; A.8.17,Logging; Monitoring activities; Clock synchronisation,CIS 8.2; CIS 8.4; CIS 8.11,A.6.2.8,CC7.2
+DE.CM-02,A.7.4,Physical security monitoring,CIS 12.1,A.4.2,CC6.4
+DE.CM-09,A.8.7,Protection against malware,CIS 10.1,A.4.2,CC6.8
+GV.OC-03,A.5.31; A.5.32; A.5.34,"Legal, statutory, regulatory and contractual requirements; Intellectual property rights; Privacy and protection of PII",CIS 2.2; CIS 3.1; CIS 17.1,A.2.3; A.5.2; A.7.3,CC1.1; P1.1
+GV.OV-01,A.5.36,"Compliance with policies, rules and standards for information security",CIS 14.1,A.9.3,CC4.1
+GV.OV-03,A.5.35,Independent review of information security,CIS 17.1,A.9.3,CC4.1
+GV.PO-01,A.5.1; A.5.10,Policies for information security; Acceptable use of information and other associated assets,CIS 14.1,A.2.2; A.9.3,CC5.3
+GV.RM-01,A.5.8,Information security in project management,CIS 16.1,A.6.1.2,CC3.1
+GV.RR-01,A.5.4,Management responsibilities,CIS 14.1,A.3.2,CC1.1
+GV.RR-02,A.5.2; A.5.3,Information security roles and responsibilities; Segregation of duties,CIS 5.4; CIS 17.1,A.3.2,CC1.3; CC5.2
+GV.RR-04,A.6.2; A.6.4,Terms and conditions of employment; Disciplinary process,CIS 14.1,A.4.6,CC1.4; CC1.5
+GV.SC-04,A.5.19; A.5.23,Information security in supplier relationships; Information security for use of cloud services,CIS 15.1,A.10.2; A.10.3,CC9.2
+GV.SC-05,A.5.20; A.6.6,Addressing information security within supplier agreements; Confidentiality or non-disclosure agreements,CIS 15.4,A.4.6; A.10.3,CC9.2
+GV.SC-06,A.5.21; A.8.30,Managing information security in the ICT supply chain; Outsourced development,CIS 15.5; CIS 16.1,A.10.3,CC9.2
+GV.SC-07,A.5.22,"Monitoring, review and change management of supplier services",CIS 15.6,A.10.3,CC9.2
+ID.AM-01,A.5.9,Inventory of information and other associated assets,CIS 1.1,A.4.3,CC6.1
+ID.AM-05,A.5.12; A.5.13,Classification of information; Labelling of information,CIS 3.7,A.7.4,CC6.1
+ID.IM-04,A.5.27,Learning from information security incidents,CIS 17.8,A.6.2.6,CC7.5
+ID.RA-01,A.8.8,Management of technical vulnerabilities,CIS 7.1,A.6.2.6,CC7.1
+ID.RA-02,A.5.6; A.5.7,Contact with special interest groups; Threat intelligence,CIS 17.2,A.6.2.3; A.8.4,CC2.3; CC3.2
+PR.AA-01,A.5.16; A.6.1,Identity management; Screening,CIS 5.1; CIS 6.1,A.4.5; A.4.6,CC1.4; CC6.1
+PR.AA-03,A.5.17; A.8.5,Authentication information; Secure authentication,CIS 5.2; CIS 6.3,A.4.5,CC6.1
+PR.AA-05,A.5.11; A.5.15; A.5.18; A.6.5; A.8.2; A.8.3; A.8.4; A.8.18,Return of assets; Access control; Access rights; Responsibilities after termination or change of employment; Privileged access rights; Information access restriction; Access to source code; Use of privileged utility programs,CIS 3.3; CIS 5.3; CIS 5.4; CIS 6.1; CIS 6.8; CIS 16.1,A.3.2; A.4.5; A.4.6; A.6.2.3,CC6.1; CC6.2; CC6.3; CC6.5; CC8.1
+PR.AA-06,A.7.1; A.7.2; A.7.3; A.7.6,"Physical security perimeters; Physical entry; Securing offices, rooms and facilities; Working in secure areas",CIS 12.1,A.4.2,CC6.4
+PR.AT-01,A.6.3,"Information security awareness, education and training",CIS 14.1,A.4.6,CC1.4
+PR.DS-01,A.5.33; A.7.7; A.7.9; A.7.10; A.7.14; A.8.10; A.8.11; A.8.12; A.8.33,Protection of records; Clear desk and clear screen; Security of assets off-premises; Storage media; Secure disposal or re-use of equipment; Information deletion; Data masking; Data leakage prevention; Test information,CIS 1.1; CIS 3.1; CIS 3.4; CIS 3.5; CIS 3.12; CIS 3.13,A.4.2; A.7.5; A.7.6,CC6.1; CC6.4; CC6.5; CC6.7; CC8.1
+PR.DS-02,A.5.14; A.8.24,Information transfer; Use of cryptography,CIS 3.10; CIS 3.11,A.7.2; A.7.6,CC6.7
+PR.DS-11,A.8.13,Information backup,CIS 11.2,A.6.2.6,A1.2
+PR.IR-01,A.8.20; A.8.21; A.8.22,Networks security; Security of network services; Segregation of networks,CIS 12.2,A.4.2,CC6.6
+PR.IR-02,A.7.5; A.7.8; A.7.11; A.7.12,Protecting against physical and environmental threats; Equipment siting and protection; Supporting utilities; Cabling security,CIS 12.1,A.4.2,A1.2; CC6.4
+PR.IR-03,A.8.14,Redundancy of information processing facilities,CIS 11.1,A.4.3,A1.2
+PR.IR-04,A.5.29; A.8.6,Information security during disruption; Capacity management,CIS 11.1; CIS 12.1,A.4.3; A.6.2.6,A1.1; A1.2
+PR.PS-01,A.5.37; A.6.7; A.7.13; A.8.1; A.8.9; A.8.19; A.8.31; A.8.32; A.8.34,"Documented operating procedures; Remote working; Equipment maintenance; User endpoint devices; Configuration management; Installation of software on operational systems; Separation of development, test and production environments; Change management; Protection of information systems during audit testing",CIS 2.5; CIS 4.1; CIS 12.1; CIS 12.7; CIS 16.1; CIS 16.8; CIS 17.1,A.4.2; A.4.6; A.6.2.5; A.9.3,A1.2; CC4.1; CC5.3; CC6.7; CC6.8; CC8.1
+PR.PS-05,A.8.23,Web filtering,CIS 9.3,A.4.2,CC6.8
+PR.PS-06,A.8.25; A.8.26; A.8.27; A.8.28; A.8.29,Secure development life cycle; Application security requirements; Secure system architecture and engineering principles; Secure coding; Security testing in development and acceptance,CIS 16.1; CIS 16.11; CIS 16.12,A.6.1.3; A.6.2.3; A.6.2.4,CC8.1
+RC.RP-01,A.5.30,ICT readiness for business continuity,CIS 11.1,A.6.2.6,A1.3
+RS.AN-07,A.5.28,Collection of evidence,CIS 17.9,A.6.2.6,CC7.4
+RS.CO-02,A.5.5,Contact with authorities,CIS 17.2,A.8.4,CC2.3
+RS.MA-01,A.5.24,Information security incident management planning and preparation,CIS 17.1,A.6.2.6,CC7.3
+RS.MA-02,A.5.26,Response to information security incidents,CIS 17.4,A.6.2.6,CC7.4
