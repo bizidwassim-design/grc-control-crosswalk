@@ -120,7 +120,7 @@ def write_reverse_csvs(rows):
         out = outdir / f"{key}.csv"
         others = [k for k in FRAMEWORKS if k not in (key, "iso27001_2022")]
         with out.open("w", newline="", encoding="utf-8") as fh:
-            w = csv.writer(fh)
+            w = csv.writer(fh, lineterminator="\n")
             w.writerow([label, "iso27001_2022 controls", "control titles"] + [FRAMEWORKS[o][2] for o in others])
             for ref in sorted(groups, key=natural_key):
                 grp = groups[ref]
