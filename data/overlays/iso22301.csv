@@ -1,0 +1,18 @@
+ref,title,group,iso27001_2022,iso27001_clauses,confidence,verification,notes
+4.2.2,Legal and regulatory requirements,Context of the organization,A.5.31,4.2,high,verified,
+5.2,Policy,Leadership,A.5.1,5.2,medium,verified,Business continuity policy alongside the security policy
+5.3,"Roles, responsibilities and authorities",Leadership,A.5.2,5.3,high,verified,
+7.2,Competence,Support,A.6.3,7.2,high,verified,
+7.4,Communication,Support,A.5.5,7.4,medium,verified,
+8.2.2,Business impact analysis,Operation,A.5.30,,high,verified,A.5.30 expects ICT continuity requirements to come from a BIA
+8.2.3,Risk assessment,Operation,A.5.29,6.1.2,medium,verified,Disruption risks rather than information security risks
+8.3,Business continuity strategies and solutions,Operation,A.5.30; A.8.13; A.8.14,,high,verified,Backup and redundancy are typical ICT solutions
+8.3.4,Resource requirements,Operation,A.7.11; A.8.6; A.8.14,,medium,verified,
+8.4.2,Response structure,Operation,A.5.24; A.5.26,,medium,verified,Incident and crisis response teams
+8.4.3,Warning and communication,Operation,A.5.5; A.5.26; A.6.8,,medium,verified,
+8.4.4,Business continuity plans,Operation,A.5.29; A.5.30,,high,verified,
+8.4.5,Recovery,Operation,A.5.30; A.8.13; A.8.14,,high,verified,
+8.5,Exercise programme,Operation,A.5.30; A.8.13,,high,verified,Includes restore tests of backups
+8.6,Evaluation of business continuity documentation and capabilities,Operation,A.5.30; A.5.35,,medium,verified,
+9.2,Internal audit,Performance evaluation,A.5.35,9.2,high,verified,
+10.1,Nonconformity and corrective action,Improvement,A.5.27,10.2,medium,verified,Clause numbers differ: ISO 27001:2022 puts corrective action in 10.2

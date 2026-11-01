@@ -1,13 +1,28 @@
 crosswalk:
-  version: '1.0'
+  version: '1.1'
   source_framework: ISO/IEC 27001:2022 Annex A
   target_frameworks:
   - NIST CSF 2.0
   - CIS Controls v8
   - ISO 42001
   - SOC 2 TSC
+  overlays:
+  - UAE IAR
+  - DESC ISR
+  - UAE PDPL
+  - PCI DSS v4.0.1
+  - NIST SP 800-53 Rev. 5
+  - ISO 22301:2019
   license: MIT
   disclaimer: Mappings are best-effort equivalences for planning and gap analysis, not an official or audited interpretation.
+  overlay_disclaimer: 'Overlays are informative expert-judgement mappings for planning and gap analysis. They are not legal
+    advice, not an official mapping by any regulator or standards body, and not a substitute for the current official texts.
+    Laws and regulations change: check current status (for the UAE PDPL, the Executive Regulations; DIFC and ADGM have their
+    own data protection regimes) before relying on them.'
+  verification_levels:
+    verified: Identifier and title checked against the publisher's own public text.
+    secondary: Checked against a published translation or reputable secondary sources; the official text could not be retrieved.
+    unverified: Taken from secondary descriptions only; the publisher's text is not publicly available.
 controls:
 - iso27001_2022: A.5.1
   title: Policies for information security
@@ -17,6 +32,28 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.2.2
     soc2_tsc: CC5.3
+  overlays:
+    uae_iar:
+    - M1.2
+    - M2.1
+    - M3.1
+    - M4.1
+    - M6.1
+    - T1.1
+    - T2.1
+    - T3.1
+    - T4.1
+    - T7.1
+    desc_isr:
+    - Domain 1
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 12
+    nist_800_53:
+    - PL
+    - PM
+    iso22301:
+    - '5.2'
   notes: Approved and communicated policies; ISO 42001 adds an AI policy
 - iso27001_2022: A.5.2
   title: Information security roles and responsibilities
@@ -26,6 +63,20 @@ controls:
     cis_v8: CIS 17.1
     iso42001: A.3.2
     soc2_tsc: CC1.3
+  overlays:
+    uae_iar:
+    - M1.1
+    - M1.3
+    desc_isr:
+    - Domain 1
+    uae_pdpl:
+    - PDPL-08
+    pci_dss_4:
+    - Req. 12
+    nist_800_53:
+    - PM
+    iso22301:
+    - '5.3'
   notes: Defined roles and accountability; AI roles under ISO 42001
 - iso27001_2022: A.5.3
   title: Segregation of duties
@@ -35,6 +86,14 @@ controls:
     cis_v8: CIS 5.4
     iso42001: A.3.2
     soc2_tsc: CC5.2
+  overlays:
+    uae_iar:
+    - T3.2
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Separate conflicting duties for sensitive processes
 - iso27001_2022: A.5.4
   title: Management responsibilities
@@ -44,6 +103,17 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.3.2
     soc2_tsc: CC1.1
+  overlays:
+    uae_iar:
+    - M1.1
+    - M4.3
+    desc_isr:
+    - Domain 1
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PM
+    iso22301: []
   notes: Management requires compliance with policies
 - iso27001_2022: A.5.5
   title: Contact with authorities
@@ -53,6 +123,18 @@ controls:
     cis_v8: CIS 17.2
     iso42001: A.8.4
     soc2_tsc: CC2.3
+  overlays:
+    uae_iar:
+    - M1.3
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-07
+    - PDPL-12
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301:
+    - '7.4'
+    - 8.4.3
   notes: Maintain regulator and law-enforcement contacts
 - iso27001_2022: A.5.6
   title: Contact with special interest groups
@@ -62,6 +144,15 @@ controls:
     cis_v8: CIS 17.2
     iso42001: A.8.4
     soc2_tsc: CC2.3
+  overlays:
+    uae_iar:
+    - M1.3
+    - T4.4
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Threat intel sharing and professional groups
 - iso27001_2022: A.5.7
   title: Threat intelligence
@@ -71,6 +162,17 @@ controls:
     cis_v8: CIS 17.2
     iso42001: A.6.2.3
     soc2_tsc: CC3.2
+  overlays:
+    uae_iar:
+    - T8.3
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PM
+    - RA
+    - SI
+    iso22301: []
   notes: Collect and analyse threat information
 - iso27001_2022: A.5.8
   title: Information security in project management
@@ -80,6 +182,16 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.6.1.2
     soc2_tsc: CC3.1
+  overlays:
+    uae_iar: []
+    desc_isr:
+    - Domain 8
+    uae_pdpl:
+    - PDPL-10
+    pci_dss_4: []
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Embed security in projects and change
 - iso27001_2022: A.5.9
   title: Inventory of information and other associated assets
@@ -89,6 +201,18 @@ controls:
     cis_v8: CIS 1.1
     iso42001: A.4.3
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T1.1
+    - T1.2
+    desc_isr:
+    - Domain 2
+    uae_pdpl:
+    - PDPL-05
+    pci_dss_4: []
+    nist_800_53:
+    - CM
+    iso22301: []
   notes: Asset inventory with owners; ISO 42001 covers AI resources
 - iso27001_2022: A.5.10
   title: Acceptable use of information and other associated assets
@@ -98,6 +222,18 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.9.3
     soc2_tsc: CC5.3
+  overlays:
+    uae_iar:
+    - M5.2
+    - T1.2
+    - T1.3
+    desc_isr:
+    - Domain 2
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PL
+    iso22301: []
   notes: Acceptable-use rules
 - iso27001_2022: A.5.11
   title: Return of assets
@@ -107,6 +243,14 @@ controls:
     cis_v8: CIS 5.3
     iso42001: A.3.2
     soc2_tsc: CC6.5
+  overlays:
+    uae_iar:
+    - M4.4
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Return assets at termination
 - iso27001_2022: A.5.12
   title: Classification of information
@@ -116,6 +260,15 @@ controls:
     cis_v8: CIS 3.7
     iso42001: A.7.4
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T1.3
+    desc_isr:
+    - Domain 2
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Classify by value and sensitivity
 - iso27001_2022: A.5.13
   title: Labelling of information
@@ -125,6 +278,16 @@ controls:
     cis_v8: CIS 3.7
     iso42001: A.7.4
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T1.3
+    desc_isr:
+    - Domain 2
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - MP
+    iso22301: []
   notes: Label according to classification
 - iso27001_2022: A.5.14
   title: Information transfer
@@ -134,6 +297,20 @@ controls:
     cis_v8: CIS 3.10
     iso42001: A.7.2
     soc2_tsc: CC6.7
+  overlays:
+    uae_iar:
+    - T4.1
+    - T4.2
+    - T4.3
+    - T4.4
+    desc_isr:
+    - Domain 6
+    uae_pdpl:
+    - PDPL-11
+    pci_dss_4:
+    - Req. 4
+    nist_800_53: []
+    iso22301: []
   notes: Secure transfer rules and agreements
 - iso27001_2022: A.5.15
   title: Access control
@@ -143,6 +320,19 @@ controls:
     cis_v8: CIS 6.1
     iso42001: A.4.5
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T5.1
+    - T5.4
+    desc_isr:
+    - Domain 5
+    uae_pdpl:
+    - PDPL-06
+    pci_dss_4:
+    - Req. 7
+    nist_800_53:
+    - AC
+    iso22301: []
   notes: Access control policy; least privilege
 - iso27001_2022: A.5.16
   title: Identity management
@@ -152,6 +342,18 @@ controls:
     cis_v8: CIS 5.1
     iso42001: A.4.5
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T5.2
+    - T5.5
+    desc_isr:
+    - Domain 5
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 8
+    nist_800_53:
+    - IA
+    iso22301: []
   notes: Lifecycle of identities
 - iso27001_2022: A.5.17
   title: Authentication information
@@ -161,6 +363,19 @@ controls:
     cis_v8: CIS 5.2
     iso42001: A.4.5
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T5.2
+    - T5.3
+    - T5.5
+    desc_isr:
+    - Domain 5
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 8
+    nist_800_53:
+    - IA
+    iso22301: []
   notes: Secrets and credential handling
 - iso27001_2022: A.5.18
   title: Access rights
@@ -170,6 +385,18 @@ controls:
     cis_v8: CIS 6.8
     iso42001: A.4.5
     soc2_tsc: CC6.2
+  overlays:
+    uae_iar:
+    - M4.4
+    - T5.2
+    desc_isr:
+    - Domain 5
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 7
+    nist_800_53:
+    - AC
+    iso22301: []
   notes: Provision review and revoke access
 - iso27001_2022: A.5.19
   title: Information security in supplier relationships
@@ -179,6 +406,18 @@ controls:
     cis_v8: CIS 15.1
     iso42001: A.10.2
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - M1.3
+    - T6.1
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-04
+    pci_dss_4:
+    - Req. 12
+    nist_800_53:
+    - SR
+    iso22301: []
   notes: Supplier risk management
 - iso27001_2022: A.5.20
   title: Addressing information security within supplier agreements
@@ -188,6 +427,17 @@ controls:
     cis_v8: CIS 15.4
     iso42001: A.10.3
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - M1.3
+    - T6.2
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-04
+    pci_dss_4: []
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Security clauses in contracts
 - iso27001_2022: A.5.21
   title: Managing information security in the ICT supply chain
@@ -197,6 +447,15 @@ controls:
     cis_v8: CIS 15.5
     iso42001: A.10.3
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - T7.8
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - SR
+    iso22301: []
   notes: Supply chain risk including software
 - iso27001_2022: A.5.22
   title: Monitoring, review and change management of supplier services
@@ -206,6 +465,18 @@ controls:
     cis_v8: CIS 15.6
     iso42001: A.10.3
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - T6.2
+    - T7.8
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-04
+    pci_dss_4:
+    - Req. 12
+    nist_800_53:
+    - SR
+    iso22301: []
   notes: Ongoing supplier monitoring
 - iso27001_2022: A.5.23
   title: Information security for use of cloud services
@@ -215,6 +486,16 @@ controls:
     cis_v8: CIS 15.1
     iso42001: A.10.3
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - T6.3
+    desc_isr:
+    - Domain 13
+    uae_pdpl:
+    - PDPL-11
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Cloud acquisition use and exit
 - iso27001_2022: A.5.24
   title: Information security incident management planning and preparation
@@ -224,6 +505,20 @@ controls:
     cis_v8: CIS 17.1
     iso42001: A.6.2.6
     soc2_tsc: CC7.3
+  overlays:
+    uae_iar:
+    - T8.1
+    - T8.2
+    desc_isr:
+    - Domain 4
+    uae_pdpl:
+    - PDPL-07
+    pci_dss_4:
+    - Req. 12
+    nist_800_53:
+    - IR
+    iso22301:
+    - 8.4.2
   notes: Incident management process
 - iso27001_2022: A.5.25
   title: Assessment and decision on information security events
@@ -233,6 +528,16 @@ controls:
     cis_v8: CIS 17.4
     iso42001: A.6.2.6
     soc2_tsc: CC7.3
+  overlays:
+    uae_iar:
+    - T8.2
+    desc_isr:
+    - Domain 4
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - IR
+    iso22301: []
   notes: Triage and classification of events
 - iso27001_2022: A.5.26
   title: Response to information security incidents
@@ -242,6 +547,19 @@ controls:
     cis_v8: CIS 17.4
     iso42001: A.6.2.6
     soc2_tsc: CC7.4
+  overlays:
+    uae_iar:
+    - T8.2
+    desc_isr:
+    - Domain 4
+    uae_pdpl:
+    - PDPL-07
+    pci_dss_4: []
+    nist_800_53:
+    - IR
+    iso22301:
+    - 8.4.2
+    - 8.4.3
   notes: Respond per procedures
 - iso27001_2022: A.5.27
   title: Learning from information security incidents
@@ -251,6 +569,17 @@ controls:
     cis_v8: CIS 17.8
     iso42001: A.6.2.6
     soc2_tsc: CC7.5
+  overlays:
+    uae_iar:
+    - T8.2
+    desc_isr:
+    - Domain 4
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - IR
+    iso22301:
+    - '10.1'
   notes: Lessons learned
 - iso27001_2022: A.5.28
   title: Collection of evidence
@@ -260,6 +589,16 @@ controls:
     cis_v8: CIS 17.9
     iso42001: A.6.2.6
     soc2_tsc: CC7.4
+  overlays:
+    uae_iar:
+    - T8.2
+    desc_isr:
+    - Domain 4
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - IR
+    iso22301: []
   notes: Preserve forensic evidence
 - iso27001_2022: A.5.29
   title: Information security during disruption
@@ -269,6 +608,19 @@ controls:
     cis_v8: CIS 11.1
     iso42001: A.6.2.6
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T9.1
+    - T9.2
+    desc_isr:
+    - Domain 7
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - CP
+    iso22301:
+    - 8.2.3
+    - 8.4.4
   notes: Maintain security during disruption
 - iso27001_2022: A.5.30
   title: ICT readiness for business continuity
@@ -278,6 +630,24 @@ controls:
     cis_v8: CIS 11.1
     iso42001: A.6.2.6
     soc2_tsc: A1.3
+  overlays:
+    uae_iar:
+    - T9.1
+    - T9.2
+    - T9.3
+    desc_isr:
+    - Domain 7
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - CP
+    iso22301:
+    - 8.2.2
+    - '8.3'
+    - 8.4.4
+    - 8.4.5
+    - '8.5'
+    - '8.6'
   notes: Continuity planning and testing
 - iso27001_2022: A.5.31
   title: Legal, statutory, regulatory and contractual requirements
@@ -287,6 +657,19 @@ controls:
     cis_v8: CIS 17.1
     iso42001: A.2.3
     soc2_tsc: CC1.1
+  overlays:
+    uae_iar:
+    - M5.1
+    - M5.2
+    desc_isr:
+    - Domain 11
+    uae_pdpl:
+    - PDPL-01
+    - PDPL-02
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301:
+    - 4.2.2
   notes: Identify legal obligations; AI regulations under ISO 42001
 - iso27001_2022: A.5.32
   title: Intellectual property rights
@@ -296,6 +679,14 @@ controls:
     cis_v8: CIS 2.2
     iso42001: A.7.3
     soc2_tsc: CC1.1
+  overlays:
+    uae_iar:
+    - M5.2
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Protect IP including training data rights
 - iso27001_2022: A.5.33
   title: Protection of records
@@ -305,6 +696,16 @@ controls:
     cis_v8: CIS 3.4
     iso42001: A.7.5
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - M5.2
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-03
+    - PDPL-05
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Records protection and retention
 - iso27001_2022: A.5.34
   title: Privacy and protection of PII
@@ -314,6 +715,25 @@ controls:
     cis_v8: CIS 3.1
     iso42001: A.5.2
     soc2_tsc: P1.1
+  overlays:
+    uae_iar:
+    - M5.2
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-02
+    - PDPL-03
+    - PDPL-04
+    - PDPL-05
+    - PDPL-06
+    - PDPL-08
+    - PDPL-09
+    - PDPL-10
+    - PDPL-11
+    - PDPL-12
+    pci_dss_4: []
+    nist_800_53:
+    - PT
+    iso22301: []
   notes: Privacy obligations; ISO 42001 impact assessment
 - iso27001_2022: A.5.35
   title: Independent review of information security
@@ -323,6 +743,19 @@ controls:
     cis_v8: CIS 17.1
     iso42001: A.9.3
     soc2_tsc: CC4.1
+  overlays:
+    uae_iar:
+    - M6.2
+    desc_isr:
+    - Domain 11
+    - Domain 12
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - CA
+    iso22301:
+    - '8.6'
+    - '9.2'
   notes: Independent reviews and audits
 - iso27001_2022: A.5.36
   title: Compliance with policies, rules and standards for information security
@@ -332,6 +765,18 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.9.3
     soc2_tsc: CC4.1
+  overlays:
+    uae_iar:
+    - M5.1
+    - M5.3
+    - M5.4
+    desc_isr:
+    - Domain 11
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - CA
+    iso22301: []
   notes: Regular compliance reviews
 - iso27001_2022: A.5.37
   title: Documented operating procedures
@@ -341,6 +786,17 @@ controls:
     cis_v8: CIS 4.1
     iso42001: A.6.2.5
     soc2_tsc: CC5.3
+  overlays:
+    uae_iar:
+    - M1.4
+    - T3.1
+    - T3.2
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Documented procedures
 - iso27001_2022: A.6.1
   title: Screening
@@ -350,6 +806,17 @@ controls:
     cis_v8: CIS 6.1
     iso42001: A.4.6
     soc2_tsc: CC1.4
+  overlays:
+    uae_iar:
+    - M4.1
+    - M4.2
+    desc_isr:
+    - Domain 10
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PS
+    iso22301: []
   notes: Background verification
 - iso27001_2022: A.6.2
   title: Terms and conditions of employment
@@ -359,6 +826,17 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.4.6
     soc2_tsc: CC1.4
+  overlays:
+    uae_iar:
+    - M4.1
+    - M4.2
+    desc_isr:
+    - Domain 10
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PS
+    iso22301: []
   notes: Security responsibilities in contracts
 - iso27001_2022: A.6.3
   title: Information security awareness, education and training
@@ -368,6 +846,21 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.4.6
     soc2_tsc: CC1.4
+  overlays:
+    uae_iar:
+    - M3.1
+    - M3.2
+    - M3.3
+    - M3.4
+    desc_isr:
+    - Domain 10
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 12
+    nist_800_53:
+    - AT
+    iso22301:
+    - '7.2'
   notes: Awareness and training; AI literacy under ISO 42001
 - iso27001_2022: A.6.4
   title: Disciplinary process
@@ -377,6 +870,16 @@ controls:
     cis_v8: CIS 14.1
     iso42001: A.4.6
     soc2_tsc: CC1.5
+  overlays:
+    uae_iar:
+    - M4.3
+    desc_isr:
+    - Domain 10
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PS
+    iso22301: []
   notes: Formal disciplinary process
 - iso27001_2022: A.6.5
   title: Responsibilities after termination or change of employment
@@ -386,6 +889,16 @@ controls:
     cis_v8: CIS 5.3
     iso42001: A.4.6
     soc2_tsc: CC6.5
+  overlays:
+    uae_iar:
+    - M4.4
+    desc_isr:
+    - Domain 10
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PS
+    iso22301: []
   notes: Post-employment responsibilities
 - iso27001_2022: A.6.6
   title: Confidentiality or non-disclosure agreements
@@ -395,6 +908,16 @@ controls:
     cis_v8: CIS 15.4
     iso42001: A.4.6
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - M1.3
+    desc_isr:
+    - Domain 10
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PS
+    iso22301: []
   notes: NDAs
 - iso27001_2022: A.6.7
   title: Remote working
@@ -404,6 +927,15 @@ controls:
     cis_v8: CIS 12.7
     iso42001: A.4.6
     soc2_tsc: CC6.7
+  overlays:
+    uae_iar:
+    - T5.7
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - AC
+    iso22301: []
   notes: Remote working controls
 - iso27001_2022: A.6.8
   title: Information security event reporting
@@ -413,6 +945,18 @@ controls:
     cis_v8: CIS 17.2
     iso42001: A.6.2.6
     soc2_tsc: CC2.2
+  overlays:
+    uae_iar:
+    - T8.3
+    desc_isr:
+    - Domain 4
+    uae_pdpl:
+    - PDPL-07
+    pci_dss_4: []
+    nist_800_53:
+    - IR
+    iso22301:
+    - 8.4.3
   notes: Report events promptly
 - iso27001_2022: A.7.1
   title: Physical security perimeters
@@ -422,6 +966,18 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar:
+    - T2.1
+    - T2.2
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 9
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Physical perimeters
 - iso27001_2022: A.7.2
   title: Physical entry
@@ -431,6 +987,17 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar:
+    - T2.2
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 9
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Entry controls
 - iso27001_2022: A.7.3
   title: Securing offices, rooms and facilities
@@ -440,6 +1007,17 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar:
+    - T2.2
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 9
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Secure facilities
 - iso27001_2022: A.7.4
   title: Physical security monitoring
@@ -449,6 +1027,15 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar: []
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Monitor physical access
 - iso27001_2022: A.7.5
   title: Protecting against physical and environmental threats
@@ -458,6 +1045,16 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T2.2
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Environmental protection
 - iso27001_2022: A.7.6
   title: Working in secure areas
@@ -467,6 +1064,14 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar:
+    - T2.2
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Secure area rules
 - iso27001_2022: A.7.7
   title: Clear desk and clear screen
@@ -476,6 +1081,14 @@ controls:
     cis_v8: CIS 3.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar:
+    - T2.3
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Clear desk and screen
 - iso27001_2022: A.7.8
   title: Equipment siting and protection
@@ -485,6 +1098,16 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T2.3
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Equipment protection
 - iso27001_2022: A.7.9
   title: Security of assets off-premises
@@ -494,6 +1117,14 @@ controls:
     cis_v8: CIS 1.1
     iso42001: A.4.2
     soc2_tsc: CC6.7
+  overlays:
+    uae_iar:
+    - T2.3
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Off-site assets
 - iso27001_2022: A.7.10
   title: Storage media
@@ -503,6 +1134,18 @@ controls:
     cis_v8: CIS 3.5
     iso42001: A.7.5
     soc2_tsc: CC6.5
+  overlays:
+    uae_iar:
+    - T1.4
+    - T4.2
+    desc_isr:
+    - Domain 2
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 9
+    nist_800_53:
+    - MP
+    iso22301: []
   notes: Media lifecycle
 - iso27001_2022: A.7.11
   title: Supporting utilities
@@ -512,6 +1155,17 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T2.3
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PE
+    iso22301:
+    - 8.3.4
   notes: Utilities resilience
 - iso27001_2022: A.7.12
   title: Cabling security
@@ -521,6 +1175,16 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: CC6.4
+  overlays:
+    uae_iar:
+    - T2.3
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PE
+    iso22301: []
   notes: Cabling protection
 - iso27001_2022: A.7.13
   title: Equipment maintenance
@@ -530,6 +1194,16 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.2
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T2.3
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - MA
+    iso22301: []
   notes: Maintenance
 - iso27001_2022: A.7.14
   title: Secure disposal or re-use of equipment
@@ -539,6 +1213,18 @@ controls:
     cis_v8: CIS 3.5
     iso42001: A.7.5
     soc2_tsc: CC6.5
+  overlays:
+    uae_iar:
+    - T1.4
+    - T2.3
+    desc_isr:
+    - Domain 9
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 9
+    nist_800_53:
+    - MP
+    iso22301: []
   notes: Sanitise before disposal
 - iso27001_2022: A.8.1
   title: User endpoint devices
@@ -548,6 +1234,17 @@ controls:
     cis_v8: CIS 4.1
     iso42001: A.4.2
     soc2_tsc: CC6.8
+  overlays:
+    uae_iar:
+    - T1.2
+    - T2.3
+    - T5.7
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - AC
+    iso22301: []
   notes: Endpoint protection
 - iso27001_2022: A.8.2
   title: Privileged access rights
@@ -557,6 +1254,17 @@ controls:
     cis_v8: CIS 5.4
     iso42001: A.4.5
     soc2_tsc: CC6.3
+  overlays:
+    uae_iar:
+    - T5.2
+    desc_isr:
+    - Domain 5
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 7
+    nist_800_53:
+    - AC
+    iso22301: []
   notes: Restrict and monitor privileged access
 - iso27001_2022: A.8.3
   title: Information access restriction
@@ -566,6 +1274,17 @@ controls:
     cis_v8: CIS 3.3
     iso42001: A.4.5
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T5.6
+    desc_isr:
+    - Domain 5
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 7
+    nist_800_53:
+    - AC
+    iso22301: []
   notes: Restrict access per policy
 - iso27001_2022: A.8.4
   title: Access to source code
@@ -575,6 +1294,14 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.6.2.3
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T7.5
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Protect source code and models
 - iso27001_2022: A.8.5
   title: Secure authentication
@@ -584,6 +1311,18 @@ controls:
     cis_v8: CIS 6.3
     iso42001: A.4.5
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar:
+    - T5.4
+    - T5.5
+    desc_isr:
+    - Domain 5
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 8
+    nist_800_53:
+    - IA
+    iso22301: []
   notes: MFA and secure authentication
 - iso27001_2022: A.8.6
   title: Capacity management
@@ -593,6 +1332,15 @@ controls:
     cis_v8: CIS 12.1
     iso42001: A.4.3
     soc2_tsc: A1.1
+  overlays:
+    uae_iar:
+    - T3.3
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301:
+    - 8.3.4
   notes: Capacity planning
 - iso27001_2022: A.8.7
   title: Protection against malware
@@ -602,6 +1350,17 @@ controls:
     cis_v8: CIS 10.1
     iso42001: A.4.2
     soc2_tsc: CC6.8
+  overlays:
+    uae_iar:
+    - T3.4
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 5
+    nist_800_53:
+    - SI
+    iso22301: []
   notes: Anti-malware
 - iso27001_2022: A.8.8
   title: Management of technical vulnerabilities
@@ -611,6 +1370,21 @@ controls:
     cis_v8: CIS 7.1
     iso42001: A.6.2.6
     soc2_tsc: CC7.1
+  overlays:
+    uae_iar:
+    - M5.4
+    - T7.7
+    desc_isr:
+    - Domain 6
+    - Domain 12
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 6
+    - Req. 11
+    nist_800_53:
+    - RA
+    - SI
+    iso22301: []
   notes: Vulnerability management
 - iso27001_2022: A.8.9
   title: Configuration management
@@ -620,6 +1394,17 @@ controls:
     cis_v8: CIS 4.1
     iso42001: A.6.2.5
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T3.2
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 2
+    nist_800_53:
+    - CM
+    iso22301: []
   notes: Secure configuration baselines
 - iso27001_2022: A.8.10
   title: Information deletion
@@ -629,6 +1414,16 @@ controls:
     cis_v8: CIS 3.4
     iso42001: A.7.5
     soc2_tsc: CC6.5
+  overlays:
+    uae_iar: []
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-03
+    - PDPL-09
+    pci_dss_4:
+    - Req. 3
+    nist_800_53: []
+    iso22301: []
   notes: Delete when no longer required
 - iso27001_2022: A.8.11
   title: Data masking
@@ -638,6 +1433,16 @@ controls:
     cis_v8: CIS 3.12
     iso42001: A.7.6
     soc2_tsc: CC6.1
+  overlays:
+    uae_iar: []
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-03
+    - PDPL-06
+    pci_dss_4:
+    - Req. 3
+    nist_800_53: []
+    iso22301: []
   notes: Masking and pseudonymisation
 - iso27001_2022: A.8.12
   title: Data leakage prevention
@@ -647,6 +1452,15 @@ controls:
     cis_v8: CIS 3.13
     iso42001: A.7.6
     soc2_tsc: CC6.7
+  overlays:
+    uae_iar:
+    - T7.6
+    desc_isr: []
+    uae_pdpl:
+    - PDPL-06
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: DLP controls
 - iso27001_2022: A.8.13
   title: Information backup
@@ -656,6 +1470,20 @@ controls:
     cis_v8: CIS 11.2
     iso42001: A.6.2.6
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T3.5
+    desc_isr:
+    - Domain 6
+    uae_pdpl:
+    - PDPL-06
+    pci_dss_4: []
+    nist_800_53:
+    - CP
+    iso22301:
+    - '8.3'
+    - 8.4.5
+    - '8.5'
   notes: Backups and restore testing
 - iso27001_2022: A.8.14
   title: Redundancy of information processing facilities
@@ -665,6 +1493,19 @@ controls:
     cis_v8: CIS 11.1
     iso42001: A.4.3
     soc2_tsc: A1.2
+  overlays:
+    uae_iar:
+    - T9.2
+    desc_isr:
+    - Domain 7
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - CP
+    iso22301:
+    - '8.3'
+    - 8.3.4
+    - 8.4.5
   notes: Redundancy
 - iso27001_2022: A.8.15
   title: Logging
@@ -674,6 +1515,17 @@ controls:
     cis_v8: CIS 8.2
     iso42001: A.6.2.8
     soc2_tsc: CC7.2
+  overlays:
+    uae_iar:
+    - T3.6
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 10
+    nist_800_53:
+    - AU
+    iso22301: []
   notes: Logging of events
 - iso27001_2022: A.8.16
   title: Monitoring activities
@@ -683,6 +1535,19 @@ controls:
     cis_v8: CIS 8.11
     iso42001: A.6.2.8
     soc2_tsc: CC7.2
+  overlays:
+    uae_iar:
+    - T3.6
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 10
+    - Req. 11
+    nist_800_53:
+    - AU
+    - SI
+    iso22301: []
   notes: Monitor for anomalies; AI system monitoring
 - iso27001_2022: A.8.17
   title: Clock synchronisation
@@ -692,6 +1557,16 @@ controls:
     cis_v8: CIS 8.4
     iso42001: A.6.2.8
     soc2_tsc: CC7.2
+  overlays:
+    uae_iar:
+    - T3.6
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 10
+    nist_800_53:
+    - AU
+    iso22301: []
   notes: Time synchronisation
 - iso27001_2022: A.8.18
   title: Use of privileged utility programs
@@ -701,6 +1576,14 @@ controls:
     cis_v8: CIS 5.4
     iso42001: A.4.5
     soc2_tsc: CC6.3
+  overlays:
+    uae_iar:
+    - T5.5
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Restrict utilities
 - iso27001_2022: A.8.19
   title: Installation of software on operational systems
@@ -710,6 +1593,16 @@ controls:
     cis_v8: CIS 2.5
     iso42001: A.6.2.5
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T7.5
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 2
+    nist_800_53:
+    - CM
+    iso22301: []
   notes: Control software installation
 - iso27001_2022: A.8.20
   title: Networks security
@@ -719,6 +1612,18 @@ controls:
     cis_v8: CIS 12.2
     iso42001: A.4.2
     soc2_tsc: CC6.6
+  overlays:
+    uae_iar:
+    - T4.5
+    - T5.4
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 1
+    nist_800_53:
+    - SC
+    iso22301: []
   notes: Network security controls
 - iso27001_2022: A.8.21
   title: Security of network services
@@ -728,6 +1633,17 @@ controls:
     cis_v8: CIS 12.2
     iso42001: A.4.2
     soc2_tsc: CC6.6
+  overlays:
+    uae_iar:
+    - T4.5
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 1
+    nist_800_53:
+    - SC
+    iso22301: []
   notes: Secure network services
 - iso27001_2022: A.8.22
   title: Segregation of networks
@@ -737,6 +1653,19 @@ controls:
     cis_v8: CIS 12.2
     iso42001: A.4.2
     soc2_tsc: CC6.6
+  overlays:
+    uae_iar:
+    - T4.5
+    - T5.4
+    - T5.6
+    desc_isr:
+    - Domain 6
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 1
+    nist_800_53:
+    - SC
+    iso22301: []
   notes: Network segmentation
 - iso27001_2022: A.8.23
   title: Web filtering
@@ -746,6 +1675,13 @@ controls:
     cis_v8: CIS 9.3
     iso42001: A.4.2
     soc2_tsc: CC6.8
+  overlays:
+    uae_iar: []
+    desc_isr: []
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Web filtering
 - iso27001_2022: A.8.24
   title: Use of cryptography
@@ -755,6 +1691,19 @@ controls:
     cis_v8: CIS 3.11
     iso42001: A.7.6
     soc2_tsc: CC6.7
+  overlays:
+    uae_iar:
+    - T7.4
+    desc_isr:
+    - Domain 6
+    uae_pdpl:
+    - PDPL-06
+    pci_dss_4:
+    - Req. 3
+    - Req. 4
+    nist_800_53:
+    - SC
+    iso22301: []
   notes: Cryptography and key management
 - iso27001_2022: A.8.25
   title: Secure development life cycle
@@ -764,6 +1713,18 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.6.2.3
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T7.1
+    - T7.6
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 6
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Secure SDLC; AI development lifecycle
 - iso27001_2022: A.8.26
   title: Application security requirements
@@ -773,6 +1734,19 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.6.1.3
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T4.3
+    - T7.2
+    - T7.3
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 6
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Security requirements for applications
 - iso27001_2022: A.8.27
   title: Secure system architecture and engineering principles
@@ -782,6 +1756,17 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.6.1.3
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T7.2
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - PL
+    - SA
+    iso22301: []
   notes: Secure engineering principles
 - iso27001_2022: A.8.28
   title: Secure coding
@@ -791,6 +1776,17 @@ controls:
     cis_v8: CIS 16.11
     iso42001: A.6.2.3
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T7.3
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 6
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Secure coding standards
 - iso27001_2022: A.8.29
   title: Security testing in development and acceptance
@@ -800,6 +1796,19 @@ controls:
     cis_v8: CIS 16.12
     iso42001: A.6.2.4
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T3.3
+    - T7.6
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 6
+    - Req. 11
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Security testing; AI verification and validation
 - iso27001_2022: A.8.30
   title: Outsourced development
@@ -809,6 +1818,16 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.10.3
     soc2_tsc: CC9.2
+  overlays:
+    uae_iar:
+    - T7.6
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53:
+    - SA
+    iso22301: []
   notes: Supervise outsourced development
 - iso27001_2022: A.8.31
   title: Separation of development, test and production environments
@@ -818,6 +1837,15 @@ controls:
     cis_v8: CIS 16.8
     iso42001: A.6.2.5
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T3.2
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Environment separation
 - iso27001_2022: A.8.32
   title: Change management
@@ -827,6 +1855,19 @@ controls:
     cis_v8: CIS 16.1
     iso42001: A.6.2.5
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T3.2
+    - T7.6
+    desc_isr:
+    - Domain 6
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4:
+    - Req. 6
+    nist_800_53:
+    - CM
+    iso22301: []
   notes: Change control
 - iso27001_2022: A.8.33
   title: Test information
@@ -836,6 +1877,15 @@ controls:
     cis_v8: CIS 3.1
     iso42001: A.7.6
     soc2_tsc: CC8.1
+  overlays:
+    uae_iar:
+    - T7.5
+    desc_isr:
+    - Domain 8
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Protect test data
 - iso27001_2022: A.8.34
   title: Protection of information systems during audit testing
@@ -845,4 +1895,1731 @@ controls:
     cis_v8: CIS 17.1
     iso42001: A.9.3
     soc2_tsc: CC4.1
+  overlays:
+    uae_iar:
+    - M5.5
+    desc_isr:
+    - Domain 11
+    uae_pdpl: []
+    pci_dss_4: []
+    nist_800_53: []
+    iso22301: []
   notes: Protect systems during audit
+overlays:
+  uae_iar:
+    name: UAE Information Assurance Regulation
+    edition: v1.1 (March 2020), TDRA
+    granularity: control sub-family (e.g. T5.2)
+    items:
+    - ref: M1.1
+      title: Entity Context and Leadership
+      group: M1 Strategy and Planning
+      priority:
+      - P1
+      iso27001_2022:
+      - A.5.2
+      - A.5.4
+      iso27001_clauses:
+      - '4.1'
+      - '4.2'
+      - '4.3'
+      - '5.1'
+      - '5.3'
+      confidence: high
+      verification: verified
+      notes: Mirrors the ISMS context and leadership clauses rather than Annex A
+    - ref: M1.2
+      title: Information Security Policy
+      group: M1 Strategy and Planning
+      priority:
+      - P1
+      - P2
+      iso27001_2022:
+      - A.5.1
+      iso27001_clauses:
+      - '5.2'
+      confidence: high
+      verification: verified
+      notes: Top-level and supporting topic-specific policies
+    - ref: M1.3
+      title: Organization of Information Security
+      group: M1 Strategy and Planning
+      priority:
+      - P1
+      - P2
+      - P4
+      iso27001_2022:
+      - A.5.2
+      - A.5.5
+      - A.5.6
+      - A.5.19
+      - A.5.20
+      - A.6.6
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Bundles authorisation of new systems, NDAs, authority and interest-group contacts, external-party risk and customer/third-party
+        agreements
+    - ref: M1.4
+      title: Support
+      group: M1 Strategy and Planning
+      priority:
+      - P1
+      - P2
+      iso27001_2022:
+      - A.5.37
+      iso27001_clauses:
+      - '7.1'
+      - '7.4'
+      - '7.5'
+      confidence: high
+      verification: verified
+      notes: Resources, communication and documentation - ISMS support clauses
+    - ref: M2.1
+      title: Information Security Risk Management Policy
+      group: M2 Information Security Risk Management
+      priority:
+      - P1
+      iso27001_2022:
+      - A.5.1
+      iso27001_clauses:
+      - 6.1.1
+      confidence: medium
+      verification: verified
+      notes: ISO 27001 requires a risk process but not a separate risk policy
+    - ref: M2.2
+      title: Information Security Risk Assessment
+      group: M2 Information Security Risk Management
+      priority:
+      - P1
+      iso27001_2022: []
+      iso27001_clauses:
+      - 6.1.2
+      - '8.2'
+      confidence: high
+      verification: verified
+      notes: Identification, analysis and evaluation of risks
+    - ref: M2.3
+      title: Information Security Risk Treatment
+      group: M2 Information Security Risk Management
+      priority:
+      - P1
+      - P2
+      iso27001_2022: []
+      iso27001_clauses:
+      - 6.1.3
+      - '6.2'
+      - '8.3'
+      confidence: high
+      verification: verified
+      notes: Treatment options, control selection, treatment plan, Statement of Applicability and objectives
+    - ref: M2.4
+      title: Ongoing Information Security Risk Management
+      group: M2 Information Security Risk Management
+      priority:
+      - P1
+      iso27001_2022: []
+      iso27001_clauses:
+      - '7.4'
+      - '8.2'
+      - '9.1'
+      confidence: medium
+      verification: verified
+      notes: Risk monitoring and review plus risk communication and consultation
+    - ref: M3.1
+      title: Awareness and Training Policy
+      group: M3 Awareness and Training
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.1
+      - A.6.3
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: M3.2
+      title: Awareness and Training Planning
+      group: M3 Awareness and Training
+      priority:
+      - P2
+      iso27001_2022:
+      - A.6.3
+      iso27001_clauses:
+      - '7.2'
+      - '7.3'
+      confidence: high
+      verification: verified
+    - ref: M3.3
+      title: Security Training
+      group: M3 Awareness and Training
+      priority:
+      - P1
+      - P2
+      - P3
+      iso27001_2022:
+      - A.6.3
+      iso27001_clauses:
+      - '7.2'
+      confidence: high
+      verification: verified
+      notes: Training needs, plan, execution, results and records
+    - ref: M3.4
+      title: Security Awareness
+      group: M3 Awareness and Training
+      priority:
+      - P2
+      iso27001_2022:
+      - A.6.3
+      iso27001_clauses:
+      - '7.3'
+      confidence: high
+      verification: verified
+      notes: Awareness campaigns
+    - ref: M4.1
+      title: Human Resources Security Policy
+      group: M4 Human Resources Security
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.1
+      - A.6.1
+      - A.6.2
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: ISO 27001 has no dedicated HR security policy control
+    - ref: M4.2
+      title: Prior to Employment
+      group: M4 Human Resources Security
+      priority:
+      - P2
+      iso27001_2022:
+      - A.6.1
+      - A.6.2
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Screening and terms of employment
+    - ref: M4.3
+      title: During Employment
+      group: M4 Human Resources Security
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.4
+      - A.6.4
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Management responsibilities and disciplinary process
+    - ref: M4.4
+      title: Termination or Change of Employment
+      group: M4 Human Resources Security
+      priority:
+      - P1
+      iso27001_2022:
+      - A.5.11
+      - A.5.18
+      - A.6.5
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Termination duties, return of assets, removal of access
+    - ref: M5.1
+      title: Compliance Policy
+      group: M5 Compliance
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.31
+      - A.5.36
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: M5.2
+      title: Compliance with Information Security Legal Requirements
+      group: M5 Compliance
+      priority:
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.5.10
+      - A.5.31
+      - A.5.32
+      - A.5.33
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Legislation, IPR, records, personal data, misuse prevention, regulation of cryptography and information-sharing
+        liability
+    - ref: M5.3
+      title: Compliance with non-technical requirements
+      group: M5 Compliance
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.36
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: M5.4
+      title: Compliance with technical requirements
+      group: M5 Compliance
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.36
+      - A.8.8
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Technical compliance checking sits in A.5.36 in the 2022 edition
+    - ref: M5.5
+      title: Information Systems Audit Considerations
+      group: M5 Compliance
+      priority:
+      - P4
+      iso27001_2022:
+      - A.8.34
+      iso27001_clauses:
+      - '9.2'
+      confidence: high
+      verification: verified
+      notes: Includes audit of information-sharing community functions (no ISO equivalent)
+    - ref: M6.1
+      title: Performance Evaluation Policy
+      group: M6 Performance Evaluation and Improvement
+      priority:
+      - P3
+      iso27001_2022:
+      - A.5.1
+      iso27001_clauses:
+      - '9.1'
+      confidence: medium
+      verification: verified
+    - ref: M6.2
+      title: Performance Evaluation
+      group: M6 Performance Evaluation and Improvement
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.35
+      iso27001_clauses:
+      - '9.1'
+      - '9.2'
+      confidence: high
+      verification: verified
+      notes: Monitoring, measurement and internal audit
+    - ref: M6.3
+      title: Improvement
+      group: M6 Performance Evaluation and Improvement
+      priority:
+      - P2
+      iso27001_2022: []
+      iso27001_clauses:
+      - '10.1'
+      - '10.2'
+      confidence: high
+      verification: verified
+      notes: Corrective action and continual improvement
+    - ref: T1.1
+      title: Asset Management Policy
+      group: T1 Asset Management
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.1
+      - A.5.9
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: T1.2
+      title: Responsibility for Assets
+      group: T1 Asset Management
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.9
+      - A.5.10
+      - A.8.1
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Inventory, ownership, acceptable use and BYOD
+    - ref: T1.3
+      title: Information Classification
+      group: T1 Asset Management
+      priority:
+      - P3
+      iso27001_2022:
+      - A.5.10
+      - A.5.12
+      - A.5.13
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Classification, labelling and handling
+    - ref: T1.4
+      title: Media Handling
+      group: T1 Asset Management
+      priority:
+      - P1
+      - P2
+      iso27001_2022:
+      - A.7.10
+      - A.7.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Removable media management is a P1 control
+    - ref: T2.1
+      title: Physical and Environmental Security Policy
+      group: T2 Physical and Environmental Security
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.1
+      - A.7.1
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: T2.2
+      title: Secure Areas
+      group: T2 Physical and Environmental Security
+      priority:
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.7.1
+      - A.7.2
+      - A.7.3
+      - A.7.5
+      - A.7.6
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Includes public access, delivery and loading areas (A.7.2)
+    - ref: T2.3
+      title: Equipment Security
+      group: T2 Physical and Environmental Security
+      priority:
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.7.7
+      - A.7.8
+      - A.7.9
+      - A.7.11
+      - A.7.12
+      - A.7.13
+      - A.7.14
+      - A.8.1
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Unattended equipment maps to A.8.1; clear desk to A.7.7
+    - ref: T3.1
+      title: Operations Management Policy
+      group: T3 Operations Management
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.1
+      - A.5.37
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: T3.2
+      title: Operational Procedures and Responsibilities
+      group: T3 Operations Management
+      priority:
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.5.3
+      - A.5.37
+      - A.8.9
+      - A.8.31
+      - A.8.32
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Configuration baselines, procedures, change management, segregation of duties and environments
+    - ref: T3.3
+      title: System Planning and Acceptance
+      group: T3 Operations Management
+      priority:
+      - P3
+      - P4
+      iso27001_2022:
+      - A.8.6
+      - A.8.29
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T3.4
+      title: Protection From Malware
+      group: T3 Operations Management
+      priority:
+      - P1
+      iso27001_2022:
+      - A.8.7
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T3.5
+      title: Backup
+      group: T3 Operations Management
+      priority:
+      - P1
+      iso27001_2022:
+      - A.8.13
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T3.6
+      title: Monitoring
+      group: T3 Operations Management
+      priority:
+      - P1
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.8.15
+      - A.8.16
+      - A.8.17
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Monitoring system use (P1), audit and admin logs, fault logging, clock sync
+    - ref: T4.1
+      title: Communications Policy
+      group: T4 Communications
+      priority:
+      - P3
+      iso27001_2022:
+      - A.5.1
+      - A.5.14
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: T4.2
+      title: Information Transfer
+      group: T4 Communications
+      priority:
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.5.14
+      - A.7.10
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Transfer procedures and agreements, media in transit, messaging, business information systems
+    - ref: T4.3
+      title: Electronic Commerce Services
+      group: T4 Communications
+      priority:
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.5.14
+      - A.8.26
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Transactional services are covered by A.8.26 in the 2022 edition
+    - ref: T4.4
+      title: Information Sharing Protection
+      group: T4 Communications
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.6
+      - A.5.14
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Sector and national information-sharing platforms; no direct ISO equivalent
+    - ref: T4.5
+      title: Network Security Management
+      group: T4 Communications
+      priority:
+      - P1
+      - P2
+      iso27001_2022:
+      - A.8.20
+      - A.8.21
+      - A.8.22
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Network controls and segregation are P1; wireless is included
+    - ref: T5.1
+      title: Access Control Policy
+      group: T5 Access Control
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.15
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T5.2
+      title: User Access Management
+      group: T5 Access Control
+      priority:
+      - P1
+      iso27001_2022:
+      - A.5.16
+      - A.5.17
+      - A.5.18
+      - A.8.2
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Registration, privileges, credentials and access review - all P1
+    - ref: T5.3
+      title: User Responsibilities
+      group: T5 Access Control
+      priority:
+      - P1
+      iso27001_2022:
+      - A.5.17
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T5.4
+      title: Network Access Control
+      group: T5 Access Control
+      priority:
+      - P1
+      - P2
+      - P3
+      - P4
+      iso27001_2022:
+      - A.5.15
+      - A.8.5
+      - A.8.20
+      - A.8.22
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: External-connection authentication, device identification, connection and routing control
+    - ref: T5.5
+      title: Operating System Access Control
+      group: T5 Access Control
+      priority:
+      - P1
+      - P4
+      iso27001_2022:
+      - A.5.16
+      - A.5.17
+      - A.8.5
+      - A.8.18
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T5.6
+      title: Application and Information Access Control
+      group: T5 Access Control
+      priority:
+      - P1
+      - P2
+      - P3
+      iso27001_2022:
+      - A.8.3
+      - A.8.22
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Sensitive system isolation is closest to A.8.22
+    - ref: T5.7
+      title: Mobile Devices Access Control
+      group: T5 Access Control
+      priority:
+      - P4
+      iso27001_2022:
+      - A.6.7
+      - A.8.1
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Mobile devices and teleworking
+    - ref: T6.1
+      title: Third Party Security Policy
+      group: T6 Third-Party Security
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.19
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T6.2
+      title: Third Party Service Delivery Management
+      group: T6 Third-Party Security
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.20
+      - A.5.22
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T6.3
+      title: Cloud Computing
+      group: T6 Third-Party Security
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.23
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T7.1
+      title: Information Systems Acquisition, Development and Maintenance Policy
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.1
+      - A.8.25
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: T7.2
+      title: Security Requirements of Information Systems
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P3
+      - P4
+      iso27001_2022:
+      - A.8.26
+      - A.8.27
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Includes developer-provided training (no direct ISO equivalent)
+    - ref: T7.3
+      title: Correct Processing in Applications
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P2
+      iso27001_2022:
+      - A.8.26
+      - A.8.28
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Input/output validation and message integrity are secure-coding outcomes
+    - ref: T7.4
+      title: Cryptographic Controls
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P2
+      iso27001_2022:
+      - A.8.24
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T7.5
+      title: Security of System Files
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P3
+      - P4
+      iso27001_2022:
+      - A.8.4
+      - A.8.19
+      - A.8.33
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T7.6
+      title: Security in Development and Support Processes
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P2
+      - P3
+      iso27001_2022:
+      - A.8.12
+      - A.8.25
+      - A.8.29
+      - A.8.30
+      - A.8.32
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Information leakage maps to A.8.12
+    - ref: T7.7
+      title: Technical Vulnerability Management
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P1
+      iso27001_2022:
+      - A.8.8
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T7.8
+      title: Supply Chain Management
+      group: T7 Information Systems Acquisition, Development and Maintenance
+      priority:
+      - P3
+      - P4
+      iso27001_2022:
+      - A.5.21
+      - A.5.22
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: More prescriptive on supply-chain protection than ISO 27001
+    - ref: T8.1
+      title: Information Security Incident Management Policy
+      group: T8 Information Security Incident Management
+      priority:
+      - P2
+      iso27001_2022:
+      - A.5.24
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T8.2
+      title: Management of Information Security Incidents and Improvements
+      group: T8 Information Security Incident Management
+      priority:
+      - P2
+      - P4
+      iso27001_2022:
+      - A.5.24
+      - A.5.25
+      - A.5.26
+      - A.5.27
+      - A.5.28
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Response plan, CSIRT, classification, testing, documentation, lessons learned and evidence
+    - ref: T8.3
+      title: Information Security Events and Weaknesses Reporting
+      group: T8 Information Security Incident Management
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.7
+      - A.6.8
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Situational awareness is closest to A.5.7
+    - ref: T9.1
+      title: Information Systems Continuity Management Policy
+      group: T9 Information Systems Continuity Management
+      priority:
+      - P4
+      iso27001_2022:
+      - A.5.29
+      - A.5.30
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: T9.2
+      title: Information Security Aspects of Information Continuity
+      group: T9 Information Systems Continuity Management
+      priority:
+      - P3
+      iso27001_2022:
+      - A.5.29
+      - A.5.30
+      - A.8.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: T9.3
+      title: Testing, Maintaining and Reassessing Plans
+      group: T9 Information Systems Continuity Management
+      priority:
+      - P3
+      iso27001_2022:
+      - A.5.30
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+  desc_isr:
+    name: Dubai Information Security Regulation
+    edition: ISR version 3 domain structure, DESC
+    granularity: domain
+    items:
+    - ref: Domain 1
+      title: Information Security Management and Governance
+      iso27001_2022:
+      - A.5.1
+      - A.5.2
+      - A.5.4
+      iso27001_clauses:
+      - '4.1'
+      - '5.1'
+      - '5.3'
+      confidence: medium
+      verification: unverified
+      notes: Version 3 reportedly requires a UAE National to head the security function; no ISO equivalent
+    - ref: Domain 2
+      title: Information and Information Assets Management
+      iso27001_2022:
+      - A.5.9
+      - A.5.10
+      - A.5.12
+      - A.5.13
+      - A.7.10
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+    - ref: Domain 3
+      title: Information Security Risk Management
+      iso27001_2022: []
+      iso27001_clauses:
+      - 6.1.2
+      - 6.1.3
+      - '8.2'
+      - '8.3'
+      confidence: medium
+      verification: unverified
+      notes: Risk process maps to ISMS clauses rather than Annex A
+    - ref: Domain 4
+      title: Incident and Problem Management
+      iso27001_2022:
+      - A.5.24
+      - A.5.25
+      - A.5.26
+      - A.5.27
+      - A.5.28
+      - A.6.8
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+      notes: Problem management (added in version 3 per public reports) goes beyond ISO 27001
+    - ref: Domain 5
+      title: Access Control
+      iso27001_2022:
+      - A.5.15
+      - A.5.16
+      - A.5.17
+      - A.5.18
+      - A.8.2
+      - A.8.3
+      - A.8.5
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+    - ref: Domain 6
+      title: Operation, Systems and Communication Management
+      iso27001_2022:
+      - A.5.14
+      - A.5.37
+      - A.8.7
+      - A.8.8
+      - A.8.9
+      - A.8.13
+      - A.8.15
+      - A.8.16
+      - A.8.20
+      - A.8.21
+      - A.8.22
+      - A.8.24
+      - A.8.32
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+      notes: Broad operational domain; check the control-level text before relying on a single match
+    - ref: Domain 7
+      title: Business Continuity Planning
+      iso27001_2022:
+      - A.5.29
+      - A.5.30
+      - A.8.14
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+      notes: Version 3 reportedly adds a cyber-resilience framework requirement
+    - ref: Domain 8
+      title: Information Systems Acquisition, Development and Management
+      iso27001_2022:
+      - A.5.8
+      - A.8.25
+      - A.8.26
+      - A.8.27
+      - A.8.28
+      - A.8.29
+      - A.8.30
+      - A.8.31
+      - A.8.32
+      - A.8.33
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+    - ref: Domain 9
+      title: Environmental and Physical Security
+      iso27001_2022:
+      - A.7.1
+      - A.7.2
+      - A.7.3
+      - A.7.4
+      - A.7.5
+      - A.7.8
+      - A.7.11
+      - A.7.12
+      - A.7.13
+      - A.7.14
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+      notes: Domain title taken from the earliest public domain list; version 3 reportedly adds data-centre controls
+    - ref: Domain 10
+      title: Human Resource Security
+      iso27001_2022:
+      - A.6.1
+      - A.6.2
+      - A.6.3
+      - A.6.4
+      - A.6.5
+      - A.6.6
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+      notes: Domain title taken from the earliest public domain list
+    - ref: Domain 11
+      title: Compliance and Audit
+      iso27001_2022:
+      - A.5.31
+      - A.5.35
+      - A.5.36
+      - A.8.34
+      iso27001_clauses:
+      - '9.2'
+      confidence: medium
+      verification: unverified
+    - ref: Domain 12
+      title: Information Security Assurance and Performance Assessment
+      iso27001_2022:
+      - A.5.35
+      - A.8.8
+      iso27001_clauses:
+      - '9.1'
+      - '9.3'
+      confidence: medium
+      verification: unverified
+      notes: Earlier public lists name it Performance Measurement
+    - ref: Domain 13
+      title: Cloud Security
+      iso27001_2022:
+      - A.5.23
+      iso27001_clauses: []
+      confidence: medium
+      verification: unverified
+      notes: Version 3 reportedly restricts storing critical information outside the UAE; data residency is not an ISO 27001
+        requirement
+  uae_pdpl:
+    name: UAE Personal Data Protection Law
+    edition: Federal Decree-Law No. 45 of 2021
+    granularity: obligation (with article numbers)
+    items:
+    - ref: PDPL-01
+      title: Scope and applicable regime
+      group: Applicability
+      articles: Art. 2
+      iso27001_2022:
+      - A.5.31
+      iso27001_clauses:
+      - '4.2'
+      confidence: medium
+      verification: secondary
+      notes: Decide first whether the federal law, a free-zone regime (DIFC, ADGM) or a sector law applies
+    - ref: PDPL-02
+      title: Lawful basis and consent
+      group: Lawfulness
+      articles: Art. 4; Art. 6
+      iso27001_2022:
+      - A.5.31
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Processing without consent (Art. 4) and conditions for valid consent (Art. 6)
+    - ref: PDPL-03
+      title: Processing principles (purpose, minimisation, accuracy, retention)
+      group: Lawfulness
+      articles: Art. 5
+      iso27001_2022:
+      - A.5.33
+      - A.5.34
+      - A.8.10
+      - A.8.11
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Retention and deletion evidence usually comes from A.8.10
+    - ref: PDPL-04
+      title: Controller and processor obligations
+      group: Accountability
+      articles: Art. 7; Art. 8
+      iso27001_2022:
+      - A.5.19
+      - A.5.20
+      - A.5.22
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Includes choosing processors with sufficient guarantees and processing per instructions
+    - ref: PDPL-05
+      title: Record of personal data processing
+      group: Accountability
+      articles: Art. 7; Art. 8
+      iso27001_2022:
+      - A.5.9
+      - A.5.33
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Controller and processor each keep a record; extend the A.5.9 inventory with processing details
+    - ref: PDPL-06
+      title: Security of processing
+      group: Security
+      articles: Art. 20
+      iso27001_2022:
+      - A.5.15
+      - A.5.34
+      - A.8.11
+      - A.8.12
+      - A.8.13
+      - A.8.24
+      iso27001_clauses: []
+      confidence: high
+      verification: secondary
+      notes: Technical and organisational measures; the ISMS supplies most of the evidence
+    - ref: PDPL-07
+      title: Personal data breach notification
+      group: Security
+      articles: Art. 9
+      iso27001_2022:
+      - A.5.5
+      - A.5.24
+      - A.5.26
+      - A.6.8
+      iso27001_clauses: []
+      confidence: high
+      verification: secondary
+      notes: Notify the regulator and affected data subjects; timelines and form depend on the Executive Regulations
+    - ref: PDPL-08
+      title: Data protection officer
+      group: Accountability
+      articles: Art. 10; Art. 11; Art. 12
+      iso27001_2022:
+      - A.5.2
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Appointment and duties of the DPO and the support owed to the DPO
+    - ref: PDPL-09
+      title: Data subject rights
+      group: Rights
+      articles: Art. 13; Art. 14; Art. 15; Art. 16; Art. 17; Art. 18; Art. 19
+      iso27001_2022:
+      - A.5.34
+      - A.8.10
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Information, portability, correction or erasure, restriction, stopping processing and automated processing; ISO
+        27001 has no rights-handling control
+    - ref: PDPL-10
+      title: Data protection impact assessment
+      group: Accountability
+      articles: Art. 21
+      iso27001_2022:
+      - A.5.8
+      - A.5.34
+      iso27001_clauses:
+      - 6.1.2
+      confidence: medium
+      verification: secondary
+      notes: Required before high-risk processing using new technologies (for example profiling or large volumes of sensitive
+        data)
+    - ref: PDPL-11
+      title: Cross-border transfer
+      group: Transfers
+      articles: Art. 22; Art. 23
+      iso27001_2022:
+      - A.5.14
+      - A.5.23
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Transfers with and without an adequate level of protection; cloud hosting location matters
+    - ref: PDPL-12
+      title: Complaints and regulator cooperation
+      group: Accountability
+      articles: Art. 24
+      iso27001_2022:
+      - A.5.5
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: secondary
+      notes: Data subjects can complain to the regulator; keep regulator contacts current
+  pci_dss_4:
+    name: PCI DSS
+    edition: v4.0.1 (June 2024), PCI SSC
+    granularity: principal requirement
+    items:
+    - ref: Req. 1
+      title: Install and Maintain Network Security Controls
+      group: Build and Maintain a Secure Network and Systems
+      iso27001_2022:
+      - A.8.20
+      - A.8.21
+      - A.8.22
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Segmentation of the cardholder data environment drives PCI scope
+    - ref: Req. 2
+      title: Apply Secure Configurations to All System Components
+      group: Build and Maintain a Secure Network and Systems
+      iso27001_2022:
+      - A.8.9
+      - A.8.19
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Vendor defaults and hardening standards
+    - ref: Req. 3
+      title: Protect Stored Account Data
+      group: Protect Account Data
+      iso27001_2022:
+      - A.8.10
+      - A.8.11
+      - A.8.24
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: PCI prescribes PAN rendering and key-management detail that ISO leaves to the organisation
+    - ref: Req. 4
+      title: Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks
+      group: Protect Account Data
+      iso27001_2022:
+      - A.5.14
+      - A.8.24
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: Req. 5
+      title: Protect All Systems and Networks from Malicious Software
+      group: Maintain a Vulnerability Management Program
+      iso27001_2022:
+      - A.8.7
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Includes anti-phishing mechanisms in v4.x
+    - ref: Req. 6
+      title: Develop and Maintain Secure Systems and Software
+      group: Maintain a Vulnerability Management Program
+      iso27001_2022:
+      - A.8.8
+      - A.8.25
+      - A.8.26
+      - A.8.28
+      - A.8.29
+      - A.8.32
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Public-facing web application protection has no single ISO equivalent
+    - ref: Req. 7
+      title: Restrict Access to System Components and Cardholder Data by Business Need to Know
+      group: Implement Strong Access Control Measures
+      iso27001_2022:
+      - A.5.15
+      - A.5.18
+      - A.8.2
+      - A.8.3
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: Req. 8
+      title: Identify Users and Authenticate Access to System Components
+      group: Implement Strong Access Control Measures
+      iso27001_2022:
+      - A.5.16
+      - A.5.17
+      - A.8.5
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: PCI mandates MFA for access into the CDE; ISO is risk-based
+    - ref: Req. 9
+      title: Restrict Physical Access to Cardholder Data
+      group: Implement Strong Access Control Measures
+      iso27001_2022:
+      - A.7.1
+      - A.7.2
+      - A.7.3
+      - A.7.10
+      - A.7.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Also covers POI device inspection (no ISO equivalent)
+    - ref: Req. 10
+      title: Log and Monitor All Access to System Components and Cardholder Data
+      group: Regularly Monitor and Test Networks
+      iso27001_2022:
+      - A.8.15
+      - A.8.16
+      - A.8.17
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: PCI sets minimum retention and review frequency
+    - ref: Req. 11
+      title: Test Security of Systems and Networks Regularly
+      group: Regularly Monitor and Test Networks
+      iso27001_2022:
+      - A.8.8
+      - A.8.16
+      - A.8.29
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Fixed-frequency scans, ASV scans and penetration tests are PCI-specific
+    - ref: Req. 12
+      title: Support Information Security with Organizational Policies and Programs
+      group: Maintain an Information Security Policy
+      iso27001_2022:
+      - A.5.1
+      - A.5.2
+      - A.5.19
+      - A.5.22
+      - A.5.24
+      - A.6.3
+      iso27001_clauses:
+      - 6.1.2
+      confidence: medium
+      verification: verified
+      notes: Policy, targeted risk analysis, awareness, service-provider management and incident response
+  nist_800_53:
+    name: NIST SP 800-53
+    edition: Rev. 5
+    granularity: control family
+    items:
+    - ref: AC
+      title: Access Control
+      group: Control family
+      iso27001_2022:
+      - A.5.15
+      - A.5.18
+      - A.6.7
+      - A.8.1
+      - A.8.2
+      - A.8.3
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Remote access and mobile-device controls sit here too
+    - ref: AT
+      title: Awareness and Training
+      group: Control family
+      iso27001_2022:
+      - A.6.3
+      iso27001_clauses:
+      - '7.2'
+      - '7.3'
+      confidence: high
+      verification: verified
+    - ref: AU
+      title: Audit and Accountability
+      group: Control family
+      iso27001_2022:
+      - A.8.15
+      - A.8.16
+      - A.8.17
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: CA
+      title: Assessment, Authorization, and Monitoring
+      group: Control family
+      iso27001_2022:
+      - A.5.35
+      - A.5.36
+      iso27001_clauses:
+      - '9.1'
+      confidence: medium
+      verification: verified
+      notes: System authorisation has no ISO 27001 equivalent
+    - ref: CM
+      title: Configuration Management
+      group: Control family
+      iso27001_2022:
+      - A.5.9
+      - A.8.9
+      - A.8.19
+      - A.8.32
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Component inventory maps to A.5.9
+    - ref: CP
+      title: Contingency Planning
+      group: Control family
+      iso27001_2022:
+      - A.5.29
+      - A.5.30
+      - A.8.13
+      - A.8.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: IA
+      title: Identification and Authentication
+      group: Control family
+      iso27001_2022:
+      - A.5.16
+      - A.5.17
+      - A.8.5
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: IR
+      title: Incident Response
+      group: Control family
+      iso27001_2022:
+      - A.5.24
+      - A.5.25
+      - A.5.26
+      - A.5.27
+      - A.5.28
+      - A.6.8
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: MA
+      title: Maintenance
+      group: Control family
+      iso27001_2022:
+      - A.7.13
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: MP
+      title: Media Protection
+      group: Control family
+      iso27001_2022:
+      - A.5.13
+      - A.7.10
+      - A.7.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: PE
+      title: Physical and Environmental Protection
+      group: Control family
+      iso27001_2022:
+      - A.7.1
+      - A.7.2
+      - A.7.3
+      - A.7.4
+      - A.7.5
+      - A.7.8
+      - A.7.11
+      - A.7.12
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: PL
+      title: Planning
+      group: Control family
+      iso27001_2022:
+      - A.5.1
+      - A.5.10
+      - A.8.27
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Plans, rules of behaviour and security architecture
+    - ref: PM
+      title: Program Management
+      group: Control family
+      iso27001_2022:
+      - A.5.1
+      - A.5.2
+      - A.5.4
+      - A.5.7
+      iso27001_clauses:
+      - '6.1'
+      - '9.1'
+      confidence: medium
+      verification: verified
+      notes: Organisation-wide programme controls overlap the ISMS clauses
+    - ref: PS
+      title: Personnel Security
+      group: Control family
+      iso27001_2022:
+      - A.6.1
+      - A.6.2
+      - A.6.4
+      - A.6.5
+      - A.6.6
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: PT
+      title: PII Processing and Transparency
+      group: Control family
+      iso27001_2022:
+      - A.5.34
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: ISO/IEC 27701 is the closer ISO match
+    - ref: RA
+      title: Risk Assessment
+      group: Control family
+      iso27001_2022:
+      - A.5.7
+      - A.8.8
+      iso27001_clauses:
+      - 6.1.2
+      - '8.2'
+      confidence: high
+      verification: verified
+      notes: Vulnerability monitoring and threat awareness included
+    - ref: SA
+      title: System and Services Acquisition
+      group: Control family
+      iso27001_2022:
+      - A.5.8
+      - A.5.20
+      - A.8.25
+      - A.8.26
+      - A.8.27
+      - A.8.28
+      - A.8.29
+      - A.8.30
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: SC
+      title: System and Communications Protection
+      group: Control family
+      iso27001_2022:
+      - A.8.20
+      - A.8.21
+      - A.8.22
+      - A.8.24
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: SI
+      title: System and Information Integrity
+      group: Control family
+      iso27001_2022:
+      - A.5.7
+      - A.8.7
+      - A.8.8
+      - A.8.16
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Flaw remediation, malicious code protection, monitoring, alerts and advisories
+    - ref: SR
+      title: Supply Chain Risk Management
+      group: Control family
+      iso27001_2022:
+      - A.5.19
+      - A.5.21
+      - A.5.22
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+  iso22301:
+    name: ISO 22301
+    edition: '2019'
+    granularity: clause / sub-clause
+    items:
+    - ref: 4.2.2
+      title: Legal and regulatory requirements
+      group: Context of the organization
+      iso27001_2022:
+      - A.5.31
+      iso27001_clauses:
+      - '4.2'
+      confidence: high
+      verification: verified
+    - ref: '5.2'
+      title: Policy
+      group: Leadership
+      iso27001_2022:
+      - A.5.1
+      iso27001_clauses:
+      - '5.2'
+      confidence: medium
+      verification: verified
+      notes: Business continuity policy alongside the security policy
+    - ref: '5.3'
+      title: Roles, responsibilities and authorities
+      group: Leadership
+      iso27001_2022:
+      - A.5.2
+      iso27001_clauses:
+      - '5.3'
+      confidence: high
+      verification: verified
+    - ref: '7.2'
+      title: Competence
+      group: Support
+      iso27001_2022:
+      - A.6.3
+      iso27001_clauses:
+      - '7.2'
+      confidence: high
+      verification: verified
+    - ref: '7.4'
+      title: Communication
+      group: Support
+      iso27001_2022:
+      - A.5.5
+      iso27001_clauses:
+      - '7.4'
+      confidence: medium
+      verification: verified
+    - ref: 8.2.2
+      title: Business impact analysis
+      group: Operation
+      iso27001_2022:
+      - A.5.30
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: A.5.30 expects ICT continuity requirements to come from a BIA
+    - ref: 8.2.3
+      title: Risk assessment
+      group: Operation
+      iso27001_2022:
+      - A.5.29
+      iso27001_clauses:
+      - 6.1.2
+      confidence: medium
+      verification: verified
+      notes: Disruption risks rather than information security risks
+    - ref: '8.3'
+      title: Business continuity strategies and solutions
+      group: Operation
+      iso27001_2022:
+      - A.5.30
+      - A.8.13
+      - A.8.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Backup and redundancy are typical ICT solutions
+    - ref: 8.3.4
+      title: Resource requirements
+      group: Operation
+      iso27001_2022:
+      - A.7.11
+      - A.8.6
+      - A.8.14
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: 8.4.2
+      title: Response structure
+      group: Operation
+      iso27001_2022:
+      - A.5.24
+      - A.5.26
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+      notes: Incident and crisis response teams
+    - ref: 8.4.3
+      title: Warning and communication
+      group: Operation
+      iso27001_2022:
+      - A.5.5
+      - A.5.26
+      - A.6.8
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: 8.4.4
+      title: Business continuity plans
+      group: Operation
+      iso27001_2022:
+      - A.5.29
+      - A.5.30
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: 8.4.5
+      title: Recovery
+      group: Operation
+      iso27001_2022:
+      - A.5.30
+      - A.8.13
+      - A.8.14
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+    - ref: '8.5'
+      title: Exercise programme
+      group: Operation
+      iso27001_2022:
+      - A.5.30
+      - A.8.13
+      iso27001_clauses: []
+      confidence: high
+      verification: verified
+      notes: Includes restore tests of backups
+    - ref: '8.6'
+      title: Evaluation of business continuity documentation and capabilities
+      group: Operation
+      iso27001_2022:
+      - A.5.30
+      - A.5.35
+      iso27001_clauses: []
+      confidence: medium
+      verification: verified
+    - ref: '9.2'
+      title: Internal audit
+      group: Performance evaluation
+      iso27001_2022:
+      - A.5.35
+      iso27001_clauses:
+      - '9.2'
+      confidence: high
+      verification: verified
+    - ref: '10.1'
+      title: Nonconformity and corrective action
+      group: Improvement
+      iso27001_2022:
+      - A.5.27
+      iso27001_clauses:
+      - '10.2'
+      confidence: medium
+      verification: verified
+      notes: 'Clause numbers differ: ISO 27001:2022 puts corrective action in 10.2'

@@ -1,0 +1,13 @@
+ref,title,group,iso27001_2022,iso27001_clauses,confidence,verification,articles,notes
+PDPL-01,Scope and applicable regime,Applicability,A.5.31,4.2,medium,secondary,Art. 2,"Decide first whether the federal law, a free-zone regime (DIFC, ADGM) or a sector law applies"
+PDPL-02,Lawful basis and consent,Lawfulness,A.5.31; A.5.34,,medium,secondary,Art. 4; Art. 6,Processing without consent (Art. 4) and conditions for valid consent (Art. 6)
+PDPL-03,"Processing principles (purpose, minimisation, accuracy, retention)",Lawfulness,A.5.33; A.5.34; A.8.10; A.8.11,,medium,secondary,Art. 5,Retention and deletion evidence usually comes from A.8.10
+PDPL-04,Controller and processor obligations,Accountability,A.5.19; A.5.20; A.5.22; A.5.34,,medium,secondary,Art. 7; Art. 8,Includes choosing processors with sufficient guarantees and processing per instructions
+PDPL-05,Record of personal data processing,Accountability,A.5.9; A.5.33; A.5.34,,medium,secondary,Art. 7; Art. 8,Controller and processor each keep a record; extend the A.5.9 inventory with processing details
+PDPL-06,Security of processing,Security,A.5.15; A.5.34; A.8.11; A.8.12; A.8.13; A.8.24,,high,secondary,Art. 20,Technical and organisational measures; the ISMS supplies most of the evidence
+PDPL-07,Personal data breach notification,Security,A.5.5; A.5.24; A.5.26; A.6.8,,high,secondary,Art. 9,Notify the regulator and affected data subjects; timelines and form depend on the Executive Regulations
+PDPL-08,Data protection officer,Accountability,A.5.2; A.5.34,,medium,secondary,Art. 10; Art. 11; Art. 12,Appointment and duties of the DPO and the support owed to the DPO
+PDPL-09,Data subject rights,Rights,A.5.34; A.8.10,,medium,secondary,Art. 13; Art. 14; Art. 15; Art. 16; Art. 17; Art. 18; Art. 19,"Information, portability, correction or erasure, restriction, stopping processing and automated processing; ISO 27001 has no rights-handling control"
+PDPL-10,Data protection impact assessment,Accountability,A.5.8; A.5.34,6.1.2,medium,secondary,Art. 21,Required before high-risk processing using new technologies (for example profiling or large volumes of sensitive data)
+PDPL-11,Cross-border transfer,Transfers,A.5.14; A.5.23; A.5.34,,medium,secondary,Art. 22; Art. 23,Transfers with and without an adequate level of protection; cloud hosting location matters
+PDPL-12,Complaints and regulator cooperation,Accountability,A.5.5; A.5.34,,medium,secondary,Art. 24,Data subjects can complain to the regulator; keep regulator contacts current

@@ -17,7 +17,11 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install openpyxl pyyaml
-      - name: Validate the CSV and regenerate every output
+      - name: Validate the crosswalk and the overlays (Annex A IDs, duplicates, empty identifiers)
+        run: python scripts/validate_crosswalk.py
+      - name: Regenerate every output
         run: python scripts/build_crosswalk.py
-      - name: Fail if generated files are out of date with data/crosswalk.csv
-        run: git diff --exit-code -- data/crosswalk.yaml data/by-framework
+      - name: Fail if generated files are out of date with the sources
+        run: git diff --exit-code -- data/crosswalk.yaml data/iso27001-overlays.csv data/by-framework
+      - name: Fail if the build created files that are not committed
+        run: test -z "$(git status --porcelain --untracked-files=all -- data)"
