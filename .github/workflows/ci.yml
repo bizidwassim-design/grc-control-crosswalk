@@ -27,7 +27,7 @@ jobs:
         run: git diff --exit-code -- data/crosswalk.yaml data/iso27001-overlays.csv data/by-framework
       - name: Fail if the build created files that are not committed
         run: test -z "$(git status --porcelain --untracked-files=all -- data)"
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
       - name: Web explorer data file is generated from the sources and up to date
