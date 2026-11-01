@@ -72,6 +72,16 @@ UAE regulation, card-payment requirements or a business continuity programme wit
   Regulations, whose status was unclear at the time of writing. DIFC and ADGM have their own data protection
   regimes. **Check the current status before relying on this overlay.**
 
+### Quality and limitations
+
+| Document | What it records |
+|----------|-----------------|
+| [docs/sources.md](docs/sources.md) | Source, edition, URL and access date per overlay, plus a dated log of every source and mapping change |
+| [docs/mapping-rationale.md](docs/mapping-rationale.md) | How a row is mapped and rated; recurring patterns; how to change a mapping |
+| [docs/limitations.md](docs/limitations.md) | What the overlays do not tell you (editions, granularity, applicability, unverified items) |
+| [docs/review.md](docs/review.md) | Independent review status per overlay and how a review is recorded (none recorded yet) |
+| [tests/test_overlays.py](tests/test_overlays.py) | Run in CI: every partial match has a rationale, IAR structure and priorities, worked-example figures match the data, sources and review pages are complete |
+
 Further reading:
 
 * [docs/uae-readiness.md](docs/uae-readiness.md) — what an ISO 27001 organisation must add for IAR, DESC ISR,

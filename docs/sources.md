@@ -87,3 +87,19 @@ period) are deliberately left out because the law delegates them to the Executiv
 The `iso27001_clauses` column uses ISO/IEC 27001:2022 requirement clause numbers only (4.1–10.2). Note that the
 2022 edition places continual improvement in 10.1 and nonconformity and corrective action in 10.2. The list
 of allowed clause identifiers is in `scripts/validate_crosswalk.py`.
+
+## Source and mapping changes
+
+Every change to a source edition, a source status or a mapping is recorded here, newest first.
+
+| Date | Overlay | Change | Reason |
+|------|---------|--------|--------|
+| 2026-11-01 | UAE IAR, DESC ISR, ISO 22301 | Rationale added to 16 `medium` rows that had none (UAE IAR M5.1, M6.1, T1.1, T2.1, T3.1, T4.1, T7.1, T9.1; DESC ISR domains 2, 5, 8, 11; ISO 22301 7.4, 8.3.4, 8.4.3, 8.6). No identifier, mapping or rating changed. | A partial match must say what differs; now enforced by `tests/test_overlays.py`. |
+| 2026-11-01 | All six overlays | First release (crosswalk 1.1.0): UAE IAR v1.1, DESC ISR version 3 domain structure, UAE PDPL, PCI DSS v4.0.1, NIST SP 800-53 Rev. 5, ISO 22301:2019. All sources accessed on this date. | Initial overlays. |
+
+Open source questions, to re-check at each update:
+
+* Is UAE IAR v1.1 (March 2020) still the current edition? Not verified.
+* Has DESC published ISR version 3 text publicly, so that domain titles can move from `unverified` to `verified`?
+* Have the UAE PDPL Executive Regulations been published in the Official Gazette?
+* NIST SP 800-53 release 5.2.0 (27 August 2025): any family-level change? (Family names did not change.)

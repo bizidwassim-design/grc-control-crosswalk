@@ -2702,7 +2702,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Family-level compliance policy; ISO 27001 covers the compliance activities in A.5.31 and A.5.36 but has no separate compliance policy control",
     "priority": "P2"
    },
    {
@@ -2776,7 +2776,7 @@ window.CROSSWALK = {
     ],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Dedicated performance evaluation policy; ISO 27001 requires the activity (clause 9.1) and a policy set (A.5.1) but no separate policy for it",
     "priority": "P3"
    },
    {
@@ -2820,7 +2820,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Family-level policy; covered by the topic-specific policies of A.5.1 with the asset inventory of A.5.9, but ISO 27001 does not require a separate asset policy",
     "priority": "P2"
    },
    {
@@ -2878,7 +2878,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Family-level policy; covered by the topic-specific policies of A.5.1 with A.7.1, but ISO 27001 does not require a separate physical security policy",
     "priority": "P4"
    },
    {
@@ -2929,7 +2929,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Family-level policy; covered by the topic-specific policies of A.5.1 with the operating procedures of A.5.37, but ISO 27001 does not require a separate operations policy",
     "priority": "P4"
    },
    {
@@ -3015,7 +3015,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Family-level policy; covered by the topic-specific policies of A.5.1 with the information transfer rules of A.5.14, but ISO 27001 does not require a separate communications policy",
     "priority": "P3"
    },
    {
@@ -3228,7 +3228,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Family-level policy; covered by the topic-specific policies of A.5.1 with the secure development life cycle of A.8.25, but ISO 27001 does not require a separate policy for it",
     "priority": "P4"
    },
    {
@@ -3386,7 +3386,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": "",
+    "notes": "Continuity policy; ISO 27001 covers ICT continuity in A.5.29 and A.5.30 but has no separate continuity policy control (ISO 22301 clause 5.2 does)",
     "priority": "P4"
    },
    {
@@ -3451,7 +3451,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "unverified",
-    "notes": ""
+    "notes": "Medium because the ISR text could not be checked against DESC's own document; the mapping is based on the domain title only (see docs/sources.md)"
    },
    {
     "ref": "Domain 3",
@@ -3501,7 +3501,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "unverified",
-    "notes": ""
+    "notes": "Medium because the ISR text could not be checked against DESC's own document; the mapping is based on the domain title only (see docs/sources.md)"
    },
    {
     "ref": "Domain 6",
@@ -3560,7 +3560,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "unverified",
-    "notes": ""
+    "notes": "Medium because the ISR text could not be checked against DESC's own document; the mapping is based on the domain title only (see docs/sources.md)"
    },
    {
     "ref": "Domain 9",
@@ -3615,7 +3615,7 @@ window.CROSSWALK = {
     ],
     "confidence": "medium",
     "verification": "unverified",
-    "notes": ""
+    "notes": "Medium because the ISR text could not be checked against DESC's own document; the mapping is based on the domain title only (see docs/sources.md)"
    },
    {
     "ref": "Domain 12",
@@ -4385,7 +4385,7 @@ window.CROSSWALK = {
     ],
     "confidence": "medium",
     "verification": "verified",
-    "notes": ""
+    "notes": "BCMS communication is broader than security communication; ISO 27001 maps through clause 7.4 and the authority contacts of A.5.5"
    },
    {
     "ref": "8.2.2",
@@ -4439,7 +4439,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": ""
+    "notes": "Continuity resource requirements cover people, premises, ICT, information and supplies; ISO 27001 covers only the ICT and facility parts (A.7.11, A.8.6, A.8.14)"
    },
    {
     "ref": "8.4.2",
@@ -4466,7 +4466,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": ""
+    "notes": "ISO 27001 covers incident reporting and authority contact, not warning interested parties during a disruption"
    },
    {
     "ref": "8.4.4",
@@ -4519,7 +4519,7 @@ window.CROSSWALK = {
     "iso27001_clauses": [],
     "confidence": "medium",
     "verification": "verified",
-    "notes": ""
+    "notes": "ISO 27001 covers continuity testing (A.5.30) and independent review (A.5.35), not the evaluation of the BCM documentation as a whole"
    },
    {
     "ref": "9.2",

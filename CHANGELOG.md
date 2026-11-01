@@ -6,6 +6,15 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- `docs/mapping-rationale.md`, `docs/limitations.md` and `docs/review.md` (independent review status: none recorded yet).
+- "Source and mapping changes" log in `docs/sources.md`, with the open source questions to re-check at each update.
+- `tests/test_overlays.py`, run in CI with `pytest`: rationale required on every `medium` row, UAE IAR structure and priorities, worked-example figures checked against the overlay, sources and review pages complete.
+- The worked example is dated (fictional assessment period and report date) and names the data version it uses.
+
+### Changed
+- Rationale added to 16 `medium` rows that had none (8 UAE IAR, 4 DESC ISR, 4 ISO 22301). No identifier, mapping or rating changed.
+
+### Added (web explorer)
 - Web explorer (`index.html`, `assets/`, `data/crosswalk.js`): search and filter the 93 controls, show or hide framework and overlay columns, start from any framework or overlay identifier, overlay tables with confidence and verification, coverage view, CSV export, light and dark themes, strict CSP. Hosted on GitHub Pages.
 - `scripts/build_web_data.py` generates `data/crosswalk.js` from the validated sources; CI checks it is current, syntax-checks the app and validates the HTML.
 

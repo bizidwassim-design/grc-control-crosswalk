@@ -16,9 +16,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install openpyxl pyyaml
+      - run: pip install openpyxl pyyaml pytest
       - name: Validate the crosswalk and the overlays (Annex A IDs, duplicates, empty identifiers)
         run: python scripts/validate_crosswalk.py
+      - name: Consistency tests (rationale on partial matches, IAR structure, worked example figures, sources, review status)
+        run: pytest -q
       - name: Regenerate every output
         run: python scripts/build_crosswalk.py
       - name: Fail if generated files are out of date with the sources

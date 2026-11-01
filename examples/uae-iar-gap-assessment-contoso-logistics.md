@@ -12,6 +12,9 @@ and the ISO 27001 → IAR view in [`data/iso27001-overlays.csv`](../data/iso2700
 
 | Item | Fictional data |
 |------|----------------|
+| Assessment period (fictional) | 6 to 17 October 2026; report dated 20 October 2026 |
+| Data used | This repository, crosswalk 1.1.0: UAE IAR v1.1 overlay (66 sub-families, sources accessed 2026-11-01) |
+| Example written | 2026-11-01; figures checked against the overlay by `tests/test_overlays.py` |
 | Organisation | Contoso Logistics FZ-LLC: freight forwarding and three warehouses, about 350 staff, head office in a UAE free zone |
 | Current certification | ISO/IEC 27001:2022, scope: IT operations, the warehouse management system (WMS) and the customer portal |
 | Trigger | A federal government customer requires alignment with the UAE IA Regulation within 12 months. Management also wants to be ready in case the company is designated a critical entity in the transport sector. |
