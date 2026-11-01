@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![CI](https://github.com/bizidwassim-design/grc-control-crosswalk/actions/workflows/ci.yml/badge.svg)](https://github.com/bizidwassim-design/grc-control-crosswalk/actions/workflows/ci.yml) [![No macros](https://img.shields.io/badge/office%20files-no%20macros-success)](SECURITY.md) [![Live](https://img.shields.io/badge/live-GitHub%20Pages-1f3864)](https://bizidwassim-design.github.io/grc-control-crosswalk/) [![Fictional data](https://img.shields.io/badge/sample%20data-fictional-informational)](SECURITY.md)
 
+[![Demo](https://img.shields.io/badge/demo-open%20the%20live%20app-2F80ED?style=for-the-badge&logo=githubpages&logoColor=white)](https://bizidwassim-design.github.io/grc-control-crosswalk/)
+
 A free, open-source mapping between the controls of the frameworks most security teams juggle at once, with
 UAE and sector overlays (UAE IAR, DESC ISR, UAE PDPL, PCI DSS v4.0.1, NIST SP 800-53 Rev. 5, ISO 22301):
 
