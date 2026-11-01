@@ -147,7 +147,7 @@
   }
   function renderCoverage() {
     var fw = $("#cov-fw"), ov = $("#cov-ov"), dm = $("#cov-dom"); fw.textContent = ""; ov.textContent = ""; dm.textContent = "";
-    FW_KEYS.forEach(function (k) { fw.appendChild(bar(X.frameworks[k].header + " (" + identifiers(k).length + " identifiers)", X.controls.filter(function (c) { return c[k]; }).length, X.controls.length)); });
+    FW_KEYS.forEach(function (k) { fw.appendChild(bar(X.frameworks[k].header + " (" + identifiers(k).length + " identifiers)", X.controls.filter(function (c) { return c[k]; }).length, X.controls.length, " Annex A mapped")); });
     OV_KEYS.forEach(function (k) { var items = X.overlayItems[k], high = items.filter(function (i) { return i.confidence === "high"; }).length; ov.appendChild(bar(X.overlays[k].label + " · " + high + " high, " + (items.length - high) + " medium", items.filter(function (i) { return i.iso27001_2022.length; }).length, items.length, " with Annex A controls")); });
     domains.forEach(function (d) { dm.appendChild(bar(d, X.controls.filter(function (c) { return c.domain === d; }).length, X.controls.length)); });
   }

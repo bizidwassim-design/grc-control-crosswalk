@@ -5,6 +5,9 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+- The coverage view is now labelled *Annex A mapping coverage* and explains that each bar counts the 93 Annex A controls with at least one mapping, not compliance with the target framework.
+
 ### Added
 - `docs/mapping-rationale.md`, `docs/limitations.md` and `docs/review.md` (independent review status: none recorded yet).
 - "Source and mapping changes" log in `docs/sources.md`, with the open source questions to re-check at each update.
