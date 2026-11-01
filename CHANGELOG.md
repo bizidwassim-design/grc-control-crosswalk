@@ -5,6 +5,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- Web explorer (`index.html`, `assets/`, `data/crosswalk.js`): search and filter the 93 controls, show or hide framework and overlay columns, start from any framework or overlay identifier, overlay tables with confidence and verification, coverage view, CSV export, light and dark themes, strict CSP. Hosted on GitHub Pages.
+- `scripts/build_web_data.py` generates `data/crosswalk.js` from the validated sources; CI checks it is current, syntax-checks the app and validates the HTML.
+
 ## [1.1.0] — 2026-11-01
 
 ### Added

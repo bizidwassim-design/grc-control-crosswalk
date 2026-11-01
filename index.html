@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive crosswalk of the 93 ISO/IEC 27001:2022 Annex A controls to NIST CSF 2.0, CIS Controls v8, ISO/IEC 42001 and SOC 2, with UAE IAR, DESC ISR, UAE PDPL, PCI DSS v4.0.1, NIST SP 800-53 and ISO 22301 overlays. Runs entirely in your browser.">
+  <meta name="color-scheme" content="light dark">
+  <title>GRC Control Crosswalk</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#panels">Skip to the crosswalk</a>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div>
+        <h1>GRC Control Crosswalk</h1>
+        <p class="tagline">ISO/IEC 27001:2022 Annex A → NIST CSF 2.0 · CIS Controls v8 · ISO/IEC 42001 · SOC 2, with UAE IAR, DESC ISR, UAE PDPL, PCI DSS v4.0.1, NIST SP 800-53 and ISO 22301 overlays. Nothing leaves your browser.</p>
+      </div>
+      <div class="header-actions"><button type="button" id="theme-toggle" class="btn btn-ghost" aria-pressed="false">Dark theme</button></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card intro" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <p>
+        <strong>From ISO 27001:</strong> every Annex A control with its closest match in each target framework and the overlay items that rely on it; search, filter by domain, show or hide columns.
+        <strong>From a framework:</strong> pick any framework or overlay, then an identifier, to see the ISO controls behind it and what they map to elsewhere.
+        <strong>Overlays:</strong> what each UAE or sector regime asks for, with confidence and source verification.
+        <strong>Coverage:</strong> how much of each framework the crosswalk reaches.
+        The data is the same CSV that generates the <a href="GRC-Control-Crosswalk.xlsx">Excel workbook</a> and the YAML in this repository.
+      </p>
+      <div class="kpis" id="kpis"></div>
+    </section>
+
+    <div class="tabs" role="tablist" aria-label="Views">
+      <button type="button" role="tab" id="tab-iso" aria-controls="panel-iso" aria-selected="true">From ISO 27001</button>
+      <button type="button" role="tab" id="tab-from" aria-controls="panel-from" aria-selected="false">From a framework</button>
+      <button type="button" role="tab" id="tab-overlays" aria-controls="panel-overlays" aria-selected="false">Overlays</button>
+      <button type="button" role="tab" id="tab-coverage" aria-controls="panel-coverage" aria-selected="false">Coverage</button>
+    </div>
+
+    <div id="panels">
+      <section class="panel" id="panel-iso" role="tabpanel" aria-labelledby="tab-iso">
+        <div class="card">
+          <div class="toolbar">
+            <label>Search <input type="search" id="iso-search" placeholder="A.8.5, authentication, PR.AA, CIS 6…" aria-label="Search the crosswalk"></label>
+            <label>Domain <select id="iso-domain"><option value="">All domains</option></select></label>
+            <fieldset class="btn-row" id="iso-columns"><legend class="muted">Columns</legend></fieldset>
+            <button type="button" id="iso-export" class="btn">Export this view (CSV)</button>
+          </div>
+          <p class="muted" id="iso-meta"></p>
+          <div class="table-wrap"><table id="iso-table"><thead><tr id="iso-head"></tr></thead><tbody id="iso-body"></tbody></table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-from" role="tabpanel" aria-labelledby="tab-from" hidden>
+        <div class="card">
+          <div class="toolbar">
+            <label>Framework or overlay <select id="from-fw"></select></label>
+            <label>Identifier <select id="from-id"></select></label>
+            <label>Or search identifiers <input type="search" id="from-search" placeholder="e.g. GV.SC, CIS 6, T5, Req. 8"></label>
+          </div>
+          <div id="from-result"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-overlays" role="tabpanel" aria-labelledby="tab-overlays" hidden>
+        <div class="card">
+          <div class="toolbar">
+            <label>Overlay <select id="ov-select"></select></label>
+            <label>Search <input type="search" id="ov-search" placeholder="title, group, ISO control…"></label>
+            <button type="button" id="ov-export" class="btn">Export this overlay (CSV)</button>
+          </div>
+          <p class="muted" id="ov-meta"></p>
+          <div class="table-wrap"><table id="ov-table"><thead><tr id="ov-head"></tr></thead><tbody id="ov-body"></tbody></table></div>
+          <p class="muted">Overlays are informative, expert-judgement mappings: not legal advice, not an official mapping by any regulator or standards body, and not a substitute for the current official texts. Identifiers and short titles only.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-coverage" role="tabpanel" aria-labelledby="tab-coverage" hidden>
+        <div class="card">
+          <h2>Coverage</h2>
+          <h3>Target frameworks: ISO controls with a mapping</h3>
+          <div class="bars" id="cov-fw"></div>
+          <h3>Overlays: items whose ISO controls are all in Annex A, by confidence</h3>
+          <div class="bars" id="cov-ov"></div>
+          <h3>ISO 27001 controls per domain</h3>
+          <div class="bars" id="cov-dom"></div>
+        </div>
+      </section>
+    </div>
+
+    <section class="card actions"><div class="btn-row"><button type="button" id="btn-print" class="btn">Print</button></div><p class="status" id="status" role="status"></p></section>
+  </main>
+
+  <footer class="site-footer wrap"><p>Open source under the MIT License. Best-effort equivalences for planning and gap analysis; not an official mapping from any standards body. No data is transmitted: the page's Content-Security-Policy blocks all network requests.</p></footer>
+
+  <script src="data/crosswalk.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
