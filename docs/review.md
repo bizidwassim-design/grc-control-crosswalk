@@ -14,6 +14,8 @@ texts. It is the step that turns the overlays from a maintainer draft into a rev
 | NIST SP 800-53 | Rev. 5 | 20 | not yet reviewed | — | — |
 | ISO 22301 | 2019 | 17 | not yet reviewed | — | — |
 
+**Maintainer review:** Wassim Bizid is the editor and reviewer of all content (scope, sources, mappings and what is published). That is a maintainer review, not an independent one.
+
 No overlay has been independently reviewed yet. This page will name the reviewer, the date, the scope and the
 outcome when one is done. Nothing here should be read as a review that has not happened.
 

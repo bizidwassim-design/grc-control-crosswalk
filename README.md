@@ -139,6 +139,13 @@ Good contributions: a better single match, a note explaining a partial match, an
 
 Best-effort equivalences for planning and gap analysis. This is **not** an official mapping from any standards body and does not replace reading the standards. Control identifiers are used under nominative fair use; the standards' text itself is not reproduced. Verify against the current editions before relying on this for a certification audit.
 
+## AI assistance
+
+Built with Claude Code as a coding and writing assistant, which is why it appears as a co-author on some commits.
+**Editor and reviewer: Wassim Bizid**, who set the scope, the frameworks and the GRC approach, edited the content
+and decided what was published. Automated tests in CI check the published outputs. This is a maintainer review,
+not an independent one.
+
 ## License
 
 [MIT](LICENSE).
